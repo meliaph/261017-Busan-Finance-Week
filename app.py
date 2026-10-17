@@ -2,6 +2,7 @@
 Reports live in reports/<name>/report.json (optionally delivery-audit.json). You can also upload a Goose ZIP."""
 import io, json, zipfile
 from pathlib import Path
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -105,7 +106,7 @@ def fmt(v):
 st.title(f"{co.get('name', '')} · {co.get('ticker', '')}")
 st.caption(f"{co.get('market', '')} · as of {R.get('as_of', '')} · {R.get('subtitle', '')}")
 
-tabs = ["Overview", "Financials", "Report", "Evidence", "Trust"] + (["Compare"] if len(reports) > 1 else [])
+tabs = ["Overview", "Financials", "Report", "Evidence", "Trust"] + (["Compare", "Analysis lab"] if len(reports) > 2 else (["Compare"] if len(reports) > 1 else []))
 T = dict(zip(tabs, st.tabs(tabs)))
 
 with T["Overview"]:
@@ -219,7 +220,7 @@ if "Compare" in T:
     with T["Compare"]:
         st.caption("Margins and growth are unit-free, so they compare across currencies. Periods are calendar quarter-ends (Toyota's fiscal year ends in March). "
                    "Net profit bases differ by company, so only operating profit is compared.")
-        picked = st.multiselect("Companies", list(reports), default=list(reports), format_func=lambda k: reports[k][0]["company"]["name"])
+        picked = st.multiselect("Companies", list(reports), default=[k for k in reports if reports[k][0]["company"].get("ticker") != "005930"], format_func=lambda k: reports[k][0]["company"]["name"])
         rows = []
         for k3 in picked:
             qq = quarters_df(reports[k3][0])
@@ -241,3 +242,122 @@ if "Compare" in T:
             last = all_q[all_q.period == all_q.period.max()][["company", "period", "status", "revenue", "operating_profit", "op_margin", "rev_yoy", "unit"]]
             st.subheader("Latest quarter")
             st.dataframe(last.sort_values("op_margin", ascending=False).round(1), width="stretch", hide_index=True)
+
+
+T_90 = {3: 1.638, 4: 1.533, 5: 1.476, 6: 1.440}  # t critical values, two-sided 80% interval, df = n - 2
+
+
+def margin_panel(keys):
+    cols = {}
+    for k in keys:
+        qq = quarters_df(reports[k][0])
+        if not qq.empty:
+            cols[reports[k][0]["company"]["name"]] = qq.set_index("period").op_margin
+    return pd.DataFrame(cols).sort_index()
+
+
+def trend_fit(y):
+    """OLS of y on t. Returns slope, forecast for next point, 80% prediction half-width."""
+    y = np.asarray(y, float)
+    t = np.arange(len(y))
+    b1, b0 = np.polyfit(t, y, 1)
+    res = y - (b0 + b1 * t)
+    n = len(y)
+    s = np.sqrt((res ** 2).sum() / (n - 2))
+    x0 = n
+    se = s * np.sqrt(1 + 1 / n + (x0 - t.mean()) ** 2 / ((t - t.mean()) ** 2).sum())
+    return b1, b0 + b1 * x0, T_90.get(n - 2, np.nan) * se
+
+
+def kmeans(X, k, seed=0, iters=50):
+    best = None
+    for s_ in range(20):
+        rng = np.random.default_rng(seed + s_)
+        C = X[rng.choice(len(X), k, replace=False)]
+        for _ in range(iters):
+            lab = ((X[:, None] - C[None]) ** 2).sum(-1).argmin(1)
+            C2 = np.array([X[lab == j].mean(0) if (lab == j).any() else C[j] for j in range(k)])
+            if np.allclose(C, C2):
+                break
+            C = C2
+        inertia = ((X - C[lab]) ** 2).sum()
+        if best is None or inertia < best[0]:
+            best = (inertia, lab)
+    return best[1]
+
+
+if "Analysis lab" in T:
+    with T["Analysis lab"]:
+        st.warning("Small-data warning: each company has only about 8 quarters. These are simple descriptive and statistical tools to explore the data, "
+                   "not reliable forecasts. Operating margin is the analysis variable because it is unit-free.")
+        lab_keys = st.multiselect("Companies in the lab", list(reports),
+                                  default=[k for k in reports if reports[k][0]["company"].get("ticker") != "005930"],
+                                  format_func=lambda k: reports[k][0]["company"]["name"], key="lab_keys")
+        M = margin_panel(lab_keys).dropna(axis=1, thresh=5)
+        if M.shape[1] < 3:
+            st.info("Pick at least three companies with five or more quarters.")
+        else:
+            st.subheader("1. Profile: level, stability and direction")
+            prof = pd.DataFrame({
+                "mean margin (%)": M.mean(),
+                "volatility (std, pp)": M.std(),
+                "trend (pp per quarter)": [trend_fit(M[c].dropna())[0] for c in M],
+                "latest (%)": M.ffill().iloc[-1],
+                "worst quarter (%)": M.min()}).round(2)
+            st.dataframe(prof.sort_values("mean margin (%)", ascending=False), width="stretch")
+            fig = px.scatter(prof.reset_index(names="company"), x="volatility (std, pp)", y="mean margin (%)", text="company",
+                             title="Margin level vs stability (top-left = high and steady)")
+            fig.update_traces(textposition="top center")
+            st.plotly_chart(fig, width="stretch")
+
+            st.subheader("2. Peer groups (k-means on level, volatility, trend, latest)")
+            k_ = st.slider("Number of groups", 2, min(5, M.shape[1] - 1), 3)
+            X = prof[["mean margin (%)", "volatility (std, pp)", "trend (pp per quarter)", "latest (%)"]].values
+            Xz = (X - X.mean(0)) / (X.std(0) + 1e-9)
+            prof["group"] = ["Group " + str(g + 1) for g in kmeans(Xz, k_)]
+            fig = px.scatter(prof.reset_index(names="company"), x="mean margin (%)", y="trend (pp per quarter)", color="group", text="company",
+                             title="Groups by margin level and direction")
+            fig.update_traces(textposition="top center")
+            st.plotly_chart(fig, width="stretch")
+            st.caption("Descriptive grouping only: it says which companies have looked alike over these quarters, not why.")
+
+            st.subheader("3. Do margins move together?")
+            D = M.diff().dropna(how="all")
+            corr = D.corr().round(2)
+            st.plotly_chart(px.imshow(corr, text_auto=True, zmin=-1, zmax=1, color_continuous_scale="RdBu", title="Correlation of quarter-to-quarter margin changes"),
+                            width="stretch")
+            st.caption(f"Based on {len(D)} changes per pair, so single values are noisy. Changes are used instead of levels to avoid fake correlation from shared trends.")
+
+            st.subheader("4. Next-quarter margin: does a trend line beat a naive guess?")
+            errs = []
+            for c in M:
+                y = M[c].dropna().values
+                for t0 in range(len(y) - 3, len(y)):
+                    if t0 < 4:
+                        continue
+                    tr = np.polyval(np.polyfit(np.arange(t0), y[:t0], 1), t0)
+                    errs.append(dict(company=c, last_value=abs(y[t0] - y[t0 - 1]), average=abs(y[t0] - y[:t0].mean()), trend_line=abs(y[t0] - tr)))
+            E = pd.DataFrame(errs)
+            if not E.empty:
+                bt = E[["last_value", "average", "trend_line"]].mean().round(2).rename("mean absolute error (pp)").to_frame()
+                st.dataframe(bt.T, width="stretch")
+                st.caption(f"Rolling backtest: predict each of the last 3 quarters from earlier ones, across {E.company.nunique()} companies ({len(E)} predictions). Lower is better; "
+                           "the winner here may not hold with more data.")
+            nxt = []
+            for c in M:
+                y = M[c].dropna().values
+                b1, f, hw = trend_fit(y)
+                nxt.append(dict(company=c, latest=round(y[-1], 2), trend_forecast=round(f, 2), low_80=round(f - hw, 2), high_80=round(f + hw, 2),
+                                interval_width=round(2 * hw, 2)))
+            N = pd.DataFrame(nxt).set_index("company")
+            st.dataframe(N, width="stretch")
+            st.caption("Trend-line forecast of the next quarter's operating margin (%) with an 80% prediction interval. Wide intervals mean the trend says little; "
+                       "one-off items, seasonality and guidance are not modelled.")
+            pick = st.selectbox("Show one company", list(M.columns))
+            y = M[pick].dropna()
+            b1, f, hw = trend_fit(y.values)
+            fg = go.Figure()
+            fg.add_scatter(x=list(y.index), y=y.values, name="actual", mode="lines+markers")
+            fg.add_scatter(x=["next"], y=[f], name="trend forecast", mode="markers", error_y=dict(type="constant", value=float(hw)))
+            fg.update_layout(title=f"{pick}: operating margin (%) with next-quarter trend forecast (80% interval)", yaxis_title="%")
+            st.plotly_chart(fg, width="stretch")
