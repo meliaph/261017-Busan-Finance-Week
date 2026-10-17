@@ -1,0 +1,206 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "BYD Company",
+  "ticker": "1211",
+  "market": "HKEX"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "BYD does not publish a headline operating profit; operating profit here is the aggregator's calculation and is unverified.",
+  "Quarterly values are secondary-source; only the H1 2026 totals were cross-checked with a news report.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "CnEVPost reports H1 2026 revenue of 344.82bn yuan, which equals the aggregator's Q1 + Q2 (150,225 + 194,590 = 344,815m). H1 net profit attributable is 12.33bn versus 12.30bn summed from the aggregator."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 201.125,
+    "operating_profit": 17.225,
+    "net_profit": 11.625,
+    "source_ids": [
+     "sa_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 274.851,
+    "operating_profit": 16.76,
+    "net_profit": 14.986,
+    "source_ids": [
+     "sa_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 170.36,
+    "operating_profit": 8.876,
+    "net_profit": 9.155,
+    "source_ids": [
+     "sa_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "secondary",
+    "revenue": 200.921,
+    "operating_profit": 6.119,
+    "net_profit": 6.157,
+    "source_ids": [
+     "sa_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 194.985,
+    "operating_profit": 12.527,
+    "net_profit": 8.022,
+    "source_ids": [
+     "sa_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 237.699,
+    "operating_profit": 8.785,
+    "net_profit": 8.994,
+    "source_ids": [
+     "sa_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 150.225,
+    "operating_profit": 7.176,
+    "net_profit": 4.085,
+    "source_ids": [
+     "sa_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "secondary",
+    "revenue": 194.59,
+    "operating_profit": 14.097,
+    "net_profit": 8.21,
+    "source_ids": [
+     "sa_byd",
+     "cnev_byd"
+    ],
+    "basis": "Consolidated",
+    "unit": "CNY billion",
+    "calculation": "Reported in CNY millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_byd",
+   "title": "StockAnalysis quarterly income statement: BYD Company",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/quote/hkg/1211/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "cnev_byd",
+   "title": "BYD H1 2026 earnings (CnEVPost)",
+   "publisher": "CnEVPost",
+   "url": "https://cnevpost.com/2026/08/28/byd-h1-2026-earnings/",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "news",
+   "read_scope": "Page text read directly.",
+   "findings": "H1 2026 revenue 344.82bn yuan (-7.13%), net profit attributable 12.33bn yuan (-20.54%).",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 194.59,
+   "unit": "CNY billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "qualified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 14.097,
+   "unit": "CNY billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "qualified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 7.2,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_byd",
+    "cnev_byd"
+   ],
+   "text": "BYD Company reported 2026-Q2 revenue of CNY 194.6bn and operating profit of CNY 14.1bn (margin 7.2%). CnEVPost reports H1 2026 revenue of 344.82bn yuan, which equals the aggregator's Q1 + Q2 (150,225 + 194,590 = 344,815m). H1 net profit attributable is 12.33bn versus 12.30bn summed from the aggregator."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

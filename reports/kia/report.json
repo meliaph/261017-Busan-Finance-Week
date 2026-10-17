@@ -1,0 +1,206 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "Kia Corporation",
+  "ticker": "000270",
+  "market": "KRX (KOSPI)"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "Older quarters come from a secondary data aggregator (StockAnalysis) and were not individually checked against Kia filings.",
+  "The aggregator does not say whether net income is attributable to the parent or total.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Q2 2026 matches Just Auto (revenue 33,037bn, operating profit 2,628.5bn, net income 2,327.8bn). Two Korean-news outlets print revenue as 33.37tn, which is inconsistent with their own +12.6% YoY and 8.0% margin, so it is treated as a typo."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 26519.877,
+    "operating_profit": 2881.304,
+    "net_profit": 2267.67,
+    "source_ids": [
+     "sa_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 27148.117,
+    "operating_profit": 2716.292,
+    "net_profit": 1741.898,
+    "source_ids": [
+     "sa_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 28017.51,
+    "operating_profit": 3008.588,
+    "net_profit": 2392.963,
+    "source_ids": [
+     "sa_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "secondary",
+    "revenue": 29349.635,
+    "operating_profit": 2764.766,
+    "net_profit": 2268.846,
+    "source_ids": [
+     "sa_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 28686.037,
+    "operating_profit": 1462.24,
+    "net_profit": 1424.827,
+    "source_ids": [
+     "sa_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 28087.737,
+    "operating_profit": 1841.451,
+    "net_profit": 1474.347,
+    "source_ids": [
+     "sa_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 29501.881,
+    "operating_profit": 2205.091,
+    "net_profit": 1831.412,
+    "source_ids": [
+     "sa_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "company_release",
+    "revenue": 33037.055,
+    "operating_profit": 2628.559,
+    "net_profit": 2327.609,
+    "source_ids": [
+     "sa_kia",
+     "just_kia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_kia",
+   "title": "StockAnalysis quarterly income statement: Kia Corporation",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/quote/krx/000270/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "just_kia",
+   "title": "Kia reports a 2% rise in net income in Q2 (Just Auto)",
+   "publisher": "Just Auto",
+   "url": "https://www.just-auto.com/newsletters/kia-reports-a-2-rise-in-net-income-in-q2",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "news",
+   "read_scope": "Page text read directly.",
+   "findings": "Q2 2026 revenue 33,037.0, operating profit 2,628.5, net income 2,327.8 (KRW billion; article mislabels units as trillion).",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 33037.055,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 2628.559,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 8.0,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_kia",
+    "just_kia"
+   ],
+   "text": "Kia Corporation reported 2026-Q2 revenue of KRW 33,037.1bn and operating profit of KRW 2,628.6bn (margin 8.0%). Q2 2026 matches Just Auto (revenue 33,037bn, operating profit 2,628.5bn, net income 2,327.8bn). Two Korean-news outlets print revenue as 33.37tn, which is inconsistent with their own +12.6% YoY and 8.0% margin, so it is treated as a typo."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

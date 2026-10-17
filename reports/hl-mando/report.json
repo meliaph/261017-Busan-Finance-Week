@@ -1,0 +1,206 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "HL Mando",
+  "ticker": "204320",
+  "market": "KRX (KOSPI)"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "Q2 2026 was confirmed only through a news report citing a broker, not the company release or filing.",
+  "All quarters, including net profit, are secondary-source values.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Q2 2026 revenue 2.4953tn and operating profit 107bn agree with an Edaily report citing Daol Investment & Securities; net income appears only in the aggregator."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 2171.724,
+    "operating_profit": 82.497,
+    "net_profit": -56.653,
+    "source_ids": [
+     "sa_hl-mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 2421.756,
+    "operating_profit": 110.956,
+    "net_profit": 42.517,
+    "source_ids": [
+     "sa_hl-mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 2271.045,
+    "operating_profit": 79.183,
+    "net_profit": 27.897,
+    "source_ids": [
+     "sa_hl-mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "secondary",
+    "revenue": 2400.874,
+    "operating_profit": 104.101,
+    "net_profit": 4.494,
+    "source_ids": [
+     "sa_hl-mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 2321.278,
+    "operating_profit": 94.152,
+    "net_profit": 43.681,
+    "source_ids": [
+     "sa_hl-mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 2461.616,
+    "operating_profit": 76.923,
+    "net_profit": 23.966,
+    "source_ids": [
+     "sa_hl-mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 2311.655,
+    "operating_profit": 93.584,
+    "net_profit": 47.769,
+    "source_ids": [
+     "sa_hl-mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "secondary",
+    "revenue": 2495.3,
+    "operating_profit": 107.0,
+    "net_profit": 58.8,
+    "source_ids": [
+     "sa_hl-mando",
+     "edaily_mando"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_hl-mando",
+   "title": "StockAnalysis quarterly income statement: HL Mando",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/quote/krx/204320/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "edaily_mando",
+   "title": "HL Mando Q2 2026 results (Edaily, citing Daol Investment & Securities)",
+   "publisher": "Edaily",
+   "url": "https://en.edaily.co.kr/news/eda202608115117",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "news",
+   "read_scope": "Page text read directly.",
+   "findings": "Q2 2026 revenue 2.4953tn won, operating profit 107bn won, margin 4.3%.",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 2495.3,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "qualified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 107.0,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "qualified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 4.3,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_hl-mando",
+    "edaily_mando"
+   ],
+   "text": "HL Mando reported 2026-Q2 revenue of KRW 2,495.3bn and operating profit of KRW 107.0bn (margin 4.3%). Q2 2026 revenue 2.4953tn and operating profit 107bn agree with an Edaily report citing Daol Investment & Securities; net income appears only in the aggregator."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

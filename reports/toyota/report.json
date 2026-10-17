@@ -1,0 +1,207 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "Toyota Motor Corporation",
+  "ticker": "7203",
+  "market": "TSE (Tokyo)"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "Toyota's fiscal year runs April to March; periods here are labelled by calendar quarter-end.",
+  "Quarters other than the latest two cross-checked ones come from a secondary aggregator.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Toyota fiscal year ends in March. Calendar quarter ending 2026-06-30 is Toyota's FY2027 Q1; that quarter and the prior-year quarter match the company summary (IFRS, unaudited). Net income is attributable to owners of the parent."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 11444.571,
+    "operating_profit": 1155.756,
+    "net_profit": 573.766,
+    "source_ids": [
+     "sa_toyota"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 12391.095,
+    "operating_profit": 1215.274,
+    "net_profit": 2193.276,
+    "source_ids": [
+     "sa_toyota"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 12363.159,
+    "operating_profit": 1105.786,
+    "net_profit": 664.697,
+    "source_ids": [
+     "sa_toyota"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "company_release",
+    "revenue": 12253.326,
+    "operating_profit": 1166.141,
+    "net_profit": 841.345,
+    "source_ids": [
+     "sa_toyota",
+     "toyota_q1"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 12377.427,
+    "operating_profit": 839.551,
+    "net_profit": 932.081,
+    "source_ids": [
+     "sa_toyota"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 13456.851,
+    "operating_profit": 1191.029,
+    "net_profit": 1257.465,
+    "source_ids": [
+     "sa_toyota"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 12597.348,
+    "operating_profit": 575.167,
+    "net_profit": 817.207,
+    "source_ids": [
+     "sa_toyota"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "company_release",
+    "revenue": 13525.4,
+    "operating_profit": 1063.473,
+    "net_profit": 1477.044,
+    "source_ids": [
+     "sa_toyota",
+     "toyota_q1"
+    ],
+    "basis": "Consolidated",
+    "unit": "JPY billion",
+    "calculation": "Reported in JPY millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_toyota",
+   "title": "StockAnalysis quarterly income statement: Toyota Motor Corporation",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/quote/tyo/7203/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "toyota_q1",
+   "title": "Toyota FY2027 Q1 financial results summary",
+   "publisher": "Toyota Motor Corporation",
+   "url": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_en.pdf",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "company_statement",
+   "read_scope": "Page text read directly.",
+   "findings": "April-June 2026 revenue ¥13,525,400m, operating income ¥1,063,473m, net income attributable ¥1,477,044m; April-June 2025 12,253,326 / 1,166,141 / 841,345.",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 13525.4,
+   "unit": "JPY billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 1063.473,
+   "unit": "JPY billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 7.9,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_toyota",
+    "toyota_q1"
+   ],
+   "text": "Toyota Motor Corporation reported 2026-Q2 revenue of JPY 13,525.4bn and operating profit of JPY 1,063.5bn (margin 7.9%). Toyota fiscal year ends in March. Calendar quarter ending 2026-06-30 is Toyota's FY2027 Q1; that quarter and the prior-year quarter match the company summary (IFRS, unaudited). Net income is attributable to owners of the parent."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

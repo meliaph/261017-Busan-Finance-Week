@@ -1,0 +1,191 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "Hyundai Motor Company",
+  "ticker": "005380",
+  "market": "KRX (KOSPI)"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "Quarterly figures are the company's preliminary (잠정) earnings releases, not DART filings.",
+  "Net profit is total net income including non-controlling interests, so it is not comparable with other companies' attributable net profit.",
+  "Cash flow, capex, debt and cash were not verified (DART viewer blocked) and are not shown.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Company IR releases (hyundaimotorgroup.com) read directly in the earlier pilot; values converted from KRW 100 million (억원). Net profit includes non-controlling interests."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "company_release",
+    "revenue": 42928.3,
+    "operating_profit": 3580.9,
+    "net_profit": 3205.9,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "company_release",
+    "revenue": 46623.7,
+    "operating_profit": 2822.2,
+    "net_profit": 2474.2,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "company_release",
+    "revenue": 44407.8,
+    "operating_profit": 3633.6,
+    "net_profit": 3382.2,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "company_release",
+    "revenue": 48286.7,
+    "operating_profit": 3601.6,
+    "net_profit": 3250.4,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "company_release",
+    "revenue": 46721.4,
+    "operating_profit": 2537.3,
+    "net_profit": 2548.2,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "company_release",
+    "revenue": 46838.6,
+    "operating_profit": 1695.4,
+    "net_profit": 1184.0,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "company_release",
+    "revenue": 45938.9,
+    "operating_profit": 2514.7,
+    "net_profit": 2584.9,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "company_release",
+    "revenue": 49215.3,
+    "operating_profit": 2850.9,
+    "net_profit": 2888.0,
+    "source_ids": [
+     "hmg"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "hmg",
+   "title": "Hyundai Motor Company earnings releases, 2024-Q3 to 2026-Q2 (hyundaimotorgroup.com news pages)",
+   "publisher": "Hyundai Motor Group",
+   "url": "https://www.hyundaimotorgroup.com/ko/news/hyundai-motor-company-2026-q2-earnings",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "company_statement",
+   "read_scope": "Page text read directly.",
+   "findings": "Revenue, operating profit and net income for eight quarters read from each release (units KRW 100 million).",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 49215.3,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 2850.9,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 5.8,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "hmg"
+   ],
+   "text": "Hyundai Motor Company reported 2026-Q2 revenue of KRW 49,215.3bn and operating profit of KRW 2,850.9bn (margin 5.8%). Company IR releases (hyundaimotorgroup.com) read directly in the earlier pilot; values converted from KRW 100 million (억원). Net profit includes non-controlling interests."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

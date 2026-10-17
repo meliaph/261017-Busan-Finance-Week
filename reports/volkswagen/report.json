@@ -1,0 +1,206 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "Volkswagen Group",
+  "ticker": "VOW3",
+  "market": "XETRA (Frankfurt)"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "Net profit follows the aggregator and differs from VW's 'earnings after tax' (Q2 2026: 1,284m vs 1,538m).",
+  "Older quarters come from a secondary aggregator.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Q2 2026 revenue (82,444m) and operating result (3,469m) match the Volkswagen Group release. The company reports earnings after tax of 1,538m for Q2 2026; the aggregator's 1,284m is a different basis (likely attributable to shareholders), so net profit is not the company headline figure."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 78.478,
+    "operating_profit": 2.833,
+    "net_profit": 1.193,
+    "source_ids": [
+     "sa_volkswagen"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 87.377,
+    "operating_profit": 8.925,
+    "net_profit": 3.212,
+    "source_ids": [
+     "sa_volkswagen"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 77.558,
+    "operating_profit": 3.101,
+    "net_profit": 1.831,
+    "source_ids": [
+     "sa_volkswagen"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "secondary",
+    "revenue": 80.806,
+    "operating_profit": 3.835,
+    "net_profit": 2.175,
+    "source_ids": [
+     "sa_volkswagen"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 80.305,
+    "operating_profit": -1.299,
+    "net_profit": -0.482,
+    "source_ids": [
+     "sa_volkswagen"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 83.244,
+    "operating_profit": 4.627,
+    "net_profit": 3.15,
+    "source_ids": [
+     "sa_volkswagen"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 75.657,
+    "operating_profit": 3.339,
+    "net_profit": 1.29,
+    "source_ids": [
+     "sa_volkswagen"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "company_release",
+    "revenue": 82.444,
+    "operating_profit": 3.469,
+    "net_profit": 1.284,
+    "source_ids": [
+     "sa_volkswagen",
+     "vw_h1"
+    ],
+    "basis": "Consolidated",
+    "unit": "EUR billion",
+    "calculation": "Reported in EUR millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_volkswagen",
+   "title": "StockAnalysis quarterly income statement: Volkswagen Group",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/quote/etr/VOW3/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "vw_h1",
+   "title": "Volkswagen Group half-year 2026 results (press release)",
+   "publisher": "Volkswagen Group",
+   "url": "https://www.volkswagen-group.com/en/press-releases/volkswagen-group-stays-on-track-in-challenging-environment-and-expects-improved-margin-in-the-second-half-of-the-year-20542",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "company_statement",
+   "read_scope": "Page text read directly.",
+   "findings": "Q2 2026 sales revenue 82,444m, operating result 3,469m, earnings after tax 1,538m; Q2 2025 80,806 / 3,834 / 2,291 (EUR millions).",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 82.444,
+   "unit": "EUR billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 3.469,
+   "unit": "EUR billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 4.2,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_volkswagen",
+    "vw_h1"
+   ],
+   "text": "Volkswagen Group reported 2026-Q2 revenue of EUR 82.4bn and operating profit of EUR 3.5bn (margin 4.2%). Q2 2026 revenue (82,444m) and operating result (3,469m) match the Volkswagen Group release. The company reports earnings after tax of 1,538m for Q2 2026; the aggregator's 1,284m is a different basis (likely attributable to shareholders), so net profit is not the company headline figure."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

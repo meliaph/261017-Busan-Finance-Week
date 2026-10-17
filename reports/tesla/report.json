@@ -1,0 +1,206 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "Tesla, Inc.",
+  "ticker": "TSLA",
+  "market": "NASDAQ"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "Older quarters come from a secondary aggregator.",
+  "Net profit shown is the aggregator's net income, which can differ slightly from attributable net income.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Q2 2026 revenue (28,236) and income from operations (398) match the SEC 8-K exhibit. Net income attributable to common stockholders is 1,114 in the 8-K versus 1,116 in the aggregator (non-controlling interests)."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 25.182,
+    "operating_profit": 2.772,
+    "net_profit": 2.173,
+    "source_ids": [
+     "sa_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 25.707,
+    "operating_profit": 1.583,
+    "net_profit": 2.125,
+    "source_ids": [
+     "sa_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 19.335,
+    "operating_profit": 0.493,
+    "net_profit": 0.409,
+    "source_ids": [
+     "sa_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "secondary",
+    "revenue": 22.496,
+    "operating_profit": 0.923,
+    "net_profit": 1.172,
+    "source_ids": [
+     "sa_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 28.095,
+    "operating_profit": 1.862,
+    "net_profit": 1.373,
+    "source_ids": [
+     "sa_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 24.901,
+    "operating_profit": 1.171,
+    "net_profit": 0.84,
+    "source_ids": [
+     "sa_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 22.387,
+    "operating_profit": 0.941,
+    "net_profit": 0.477,
+    "source_ids": [
+     "sa_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "company_release",
+    "revenue": 28.236,
+    "operating_profit": 0.398,
+    "net_profit": 1.116,
+    "source_ids": [
+     "sa_tesla",
+     "sec_tesla"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_tesla",
+   "title": "StockAnalysis quarterly income statement: Tesla, Inc.",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/stocks/tsla/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "sec_tesla",
+   "title": "Tesla Form 8-K, Q2 2026 results (exhibit 99.1)",
+   "publisher": "SEC EDGAR",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026049213/exhibit991.htm",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "filing",
+   "read_scope": "Page text read directly.",
+   "findings": "Total revenues 28,236; income from operations 398; net income attributable to common stockholders 1,114 (USD millions).",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 28.236,
+   "unit": "USD billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 0.398,
+   "unit": "USD billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 1.4,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_tesla",
+    "sec_tesla"
+   ],
+   "text": "Tesla, Inc. reported 2026-Q2 revenue of USD 28.2bn and operating profit of USD 0.4bn (margin 1.4%). Q2 2026 revenue (28,236) and income from operations (398) match the SEC 8-K exhibit. Net income attributable to common stockholders is 1,114 in the 8-K versus 1,116 in the aggregator (non-controlling interests)."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

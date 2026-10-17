@@ -10,7 +10,7 @@ import streamlit as st
 st.set_page_config(page_title="Goose report dashboard", layout="wide")
 ROOT = Path(__file__).parent / "reports"
 NAMES = ("input.en.json", "report-input.json", "input.json", "report.json")
-STATUS_COLOR = {"filed": "#4C78A8", "derived": "#9ECAE9", "preliminary": "#E45756"}
+STATUS_COLOR = {"filed": "#4C78A8", "company_release": "#4C78A8", "derived": "#9ECAE9", "secondary": "#B0B0B0", "preliminary": "#E45756"}
 BADGE = {"verified": "🟢", "supported": "🟢", "qualified": "🟡", "inference": "🔵", "unverified": "🔴",
          "unresolved": "🔴", "contradicted": "🔴", "read": "🟢", "direct_read": "🟢", "blocked": "🔴",
          "pass": "🟢", "revise": "🟡", "limited": "🟡", "pending": "⚪", "partial": "🟡", "ok": "🟢"}
@@ -112,7 +112,7 @@ with T["Overview"]:
     c = st.columns(3)
     c[0].metric("Report status", R.get("status", "-"))
     op = R.get("opinion", {})
-    c[1].metric("Opinion", op.get("decision", "-"), op.get("confidence", ""), delta_color="off")
+    c[1].metric("Opinion", op.get("decision", "Not assessed"), op.get("confidence", ""), delta_color="off")
     c[2].metric("Delivery audit", (AUD or {}).get("decision", "n/a"))
     st.warning("This is a research draft, not investment advice. "
                + (op.get("lead", {}).get("text", "") if isinstance(op.get("lead"), dict) else ""))
@@ -135,7 +135,7 @@ with T["Financials"]:
         st.info("This report has no quarterly history.")
     else:
         unit = q["unit"].dropna().iloc[0] if "unit" in q else ""
-        st.caption(f"Unit: {unit}. Colour = data type: filed / derived (full year − cumulative) / preliminary (company, pre-close).")
+        st.caption(f"Unit: {unit}. Colour = data type: filed or company release (blue) / derived (light blue) / secondary source only (grey) / preliminary (red).")
         a, bcol = st.columns(2)
         for col, m, t in ((a, "revenue", "Revenue"), (bcol, "operating_profit", "Operating profit")):
             fig = px.bar(q, x="period", y=m, color="status", color_discrete_map=STATUS_COLOR, title=t)
@@ -155,6 +155,8 @@ with T["Financials"]:
 
 with T["Report"]:
     st.caption("The full Goose report, section by section. 🟢 verified · 🟡 qualified · 🔵 analyst inference.")
+    if not R.get("sections"):
+        st.info("This is a light data pull (financials only), so there is no written report. Run the full Goose report workflow to get one.")
     for s in R.get("sections", []):
         with st.expander(s["title"]):
             for i, blk in enumerate(s["blocks"]):
@@ -175,9 +177,10 @@ with T["Report"]:
                             **({} if blk["kind"] == "bar" else {"mode": "lines+markers"}))
                     f.update_layout(title=blk["title"], yaxis_title=blk.get("unit"), barmode="group")
                     st.plotly_chart(f, width="stretch", key=f"{s['title']}{i}")
-    with st.expander("Full opinion"):
-        for p in R.get("opinion", {}).get("paragraphs", []):
-            st.markdown(" ".join(p["sentences"]))
+    if R.get("opinion", {}).get("paragraphs"):
+        with st.expander("Full opinion"):
+            for p in R["opinion"]["paragraphs"]:
+                st.markdown(" ".join(p["sentences"]))
 
 with T["Evidence"]:
     S = pd.DataFrame(R.get("sources", []))
@@ -214,11 +217,27 @@ with T["Trust"]:
 
 if "Compare" in T:
     with T["Compare"]:
-        st.caption("Margins are unit-free, so they compare across companies. Fiscal calendars may differ; check each report.")
-        fig = go.Figure()
-        for k3 in reports:
+        st.caption("Margins and growth are unit-free, so they compare across currencies. Periods are calendar quarter-ends (Toyota's fiscal year ends in March). "
+                   "Net profit bases differ by company, so only operating profit is compared.")
+        picked = st.multiselect("Companies", list(reports), default=list(reports), format_func=lambda k: reports[k][0]["company"]["name"])
+        rows = []
+        for k3 in picked:
             qq = quarters_df(reports[k3][0])
-            if not qq.empty:
-                fig.add_scatter(x=qq.period, y=qq.op_margin, name=reports[k3][0]["company"]["name"], mode="lines+markers")
-        fig.update_layout(title="Operating margin (%)", yaxis_title="%")
-        st.plotly_chart(fig, width="stretch")
+            if qq.empty:
+                continue
+            qq = qq.sort_values("period").copy()
+            qq["company"] = reports[k3][0]["company"]["name"]
+            qq["rev_yoy"] = qq.revenue.pct_change(4) * 100
+            rows.append(qq)
+        if rows:
+            all_q = pd.concat(rows)
+            a1, a2 = st.columns(2)
+            f1 = px.line(all_q, x="period", y="op_margin", color="company", markers=True, title="Operating margin (%)")
+            f1.update_layout(yaxis_title="%", xaxis_title=None)
+            a1.plotly_chart(f1, width="stretch")
+            f2 = px.line(all_q.dropna(subset=["rev_yoy"]), x="period", y="rev_yoy", color="company", markers=True, title="Revenue growth vs same quarter last year (%)")
+            f2.update_layout(yaxis_title="%", xaxis_title=None)
+            a2.plotly_chart(f2, width="stretch")
+            last = all_q[all_q.period == all_q.period.max()][["company", "period", "status", "revenue", "operating_profit", "op_margin", "rev_yoy", "unit"]]
+            st.subheader("Latest quarter")
+            st.dataframe(last.sort_values("op_margin", ascending=False).round(1), width="stretch", hide_index=True)

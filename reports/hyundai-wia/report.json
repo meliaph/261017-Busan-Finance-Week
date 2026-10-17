@@ -1,0 +1,206 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "Hyundai Wia",
+  "ticker": "011210",
+  "market": "KRX (KOSPI)"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "2026-Q2 net income is +192.1% YoY in the disclosure, which does not reproduce from the aggregator's 2025-Q2 net income (12,789m). The two net-income series probably differ in basis (total vs attributable), so net profit and net margin are not reliable for Hyundai Wia.",
+  "Older quarters are from a secondary aggregator.",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Q2 2026 from the company's consolidated preliminary-results disclosure (as reproduced by StockHub): revenue 2,353,744m, operating profit 50,386m, net income 50,579m."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 2007.751,
+    "operating_profit": 51.216,
+    "net_profit": -12.253,
+    "source_ids": [
+     "sa_hyundai-wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 2006.379,
+    "operating_profit": 54.7,
+    "net_profit": 52.609,
+    "source_ids": [
+     "sa_hyundai-wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 2061.791,
+    "operating_profit": 48.548,
+    "net_profit": 95.742,
+    "source_ids": [
+     "sa_hyundai-wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "secondary",
+    "revenue": 2178.558,
+    "operating_profit": 56.331,
+    "net_profit": 12.789,
+    "source_ids": [
+     "sa_hyundai-wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 2151.875,
+    "operating_profit": 51.848,
+    "net_profit": -16.334,
+    "source_ids": [
+     "sa_hyundai-wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 2089.337,
+    "operating_profit": 47.686,
+    "net_profit": 6.82,
+    "source_ids": [
+     "sa_hyundai-wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 2179.328,
+    "operating_profit": 51.566,
+    "net_profit": 31.745,
+    "source_ids": [
+     "sa_hyundai-wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "preliminary",
+    "revenue": 2353.744,
+    "operating_profit": 50.386,
+    "net_profit": 50.579,
+    "source_ids": [
+     "sa_hyundai-wia",
+     "stockhub_wia"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW billion",
+    "calculation": "Reported in KRW millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_hyundai-wia",
+   "title": "StockAnalysis quarterly income statement: Hyundai Wia",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/quote/krx/011210/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "stockhub_wia",
+   "title": "Hyundai Wia consolidated preliminary results (StockHub)",
+   "publisher": "StockHub",
+   "url": "https://stockhub.kr/news/news_ae12c0b02d4a",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "company_statement",
+   "read_scope": "Page text read directly.",
+   "findings": "Disclosure of Q2 2026 consolidated preliminary results; filed 2026-07-24 15:20.",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 2353.744,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 50.386,
+   "unit": "KRW billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 2.1,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_hyundai-wia",
+    "stockhub_wia"
+   ],
+   "text": "Hyundai Wia reported 2026-Q2 revenue of KRW 2,353.7bn and operating profit of KRW 50.4bn (margin 2.1%). Q2 2026 from the company's consolidated preliminary-results disclosure (as reproduced by StockHub): revenue 2,353,744m, operating profit 50,386m, net income 50,579m."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}

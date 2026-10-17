@@ -1,0 +1,206 @@
+{
+ "schema_version": 1,
+ "document_type": "financial_snapshot",
+ "company": {
+  "name": "General Motors",
+  "ticker": "GM",
+  "market": "NYSE"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "subtitle": "Light data pull: 8 quarters of revenue, operating profit and net profit (no narrative report)",
+ "limitations": [
+  "Operating income for earlier quarters is the aggregator's figure and may be defined differently from the 8-K (2026-Q2: 1,538m vs 1,459m), so the operating-profit trend has a basis break at the last point.",
+  "Net profit follows the aggregator (2026-Q2: 1,287m vs 1,305m attributable in the 8-K).",
+  "Light data pull only: no valuation, no opinion, no fact-check pass, no DART/SEC body or notes review beyond what is listed under sources.",
+  "Q2 2026 revenue (48,026m) matches the SEC 8-K. The 8-K shows operating income 1,459m versus 1,538m in the aggregator, and net income attributable to stockholders 1,305m versus 1,287m; the 8-K operating income is used for 2026-Q2."
+ ],
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "period_end": "2024-09-30",
+    "status": "secondary",
+    "revenue": 48.756,
+    "operating_profit": 3.881,
+    "net_profit": 3.029,
+    "source_ids": [
+     "sa_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2024-Q4",
+    "period_end": "2024-12-31",
+    "status": "secondary",
+    "revenue": 47.702,
+    "operating_profit": 0.872,
+    "net_profit": -1.725,
+    "source_ids": [
+     "sa_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q1",
+    "period_end": "2025-03-31",
+    "status": "secondary",
+    "revenue": 44.019,
+    "operating_profit": 3.437,
+    "net_profit": 3.359,
+    "source_ids": [
+     "sa_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q2",
+    "period_end": "2025-06-30",
+    "status": "secondary",
+    "revenue": 47.122,
+    "operating_profit": 2.215,
+    "net_profit": 1.865,
+    "source_ids": [
+     "sa_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q3",
+    "period_end": "2025-09-30",
+    "status": "secondary",
+    "revenue": 48.591,
+    "operating_profit": 2.757,
+    "net_profit": 1.297,
+    "source_ids": [
+     "sa_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2025-Q4",
+    "period_end": "2025-12-31",
+    "status": "secondary",
+    "revenue": 45.286,
+    "operating_profit": 2.96,
+    "net_profit": -3.33,
+    "source_ids": [
+     "sa_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q1",
+    "period_end": "2026-03-31",
+    "status": "secondary",
+    "revenue": 43.624,
+    "operating_profit": 3.006,
+    "net_profit": 2.614,
+    "source_ids": [
+     "sa_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   },
+   {
+    "period": "2026-Q2",
+    "period_end": "2026-06-30",
+    "status": "company_release",
+    "revenue": 48.026,
+    "operating_profit": 1.459,
+    "net_profit": 1.287,
+    "source_ids": [
+     "sa_gm",
+     "sec_gm"
+    ],
+    "basis": "Consolidated",
+    "unit": "USD billion",
+    "calculation": "Reported in USD millions; divided by 1,000"
+   }
+  ],
+  "annual": [],
+  "preliminary": []
+ },
+ "sources": [
+  {
+   "id": "sa_gm",
+   "title": "StockAnalysis quarterly income statement: General Motors",
+   "publisher": "StockAnalysis.com",
+   "url": "https://stockanalysis.com/stocks/gm/financials/?p=quarterly",
+   "published_at": "",
+   "period": "2024-Q3 to 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "data_aggregator",
+   "read_scope": "Quarterly income statement table (latest 10 quarters).",
+   "findings": "Revenue, operating income and net income for each quarter.",
+   "limitations": "Secondary aggregator; net income basis not stated."
+  },
+  {
+   "id": "sec_gm",
+   "title": "GM Form 8-K, Q2 2026 press release and financial statements",
+   "publisher": "SEC EDGAR",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001467858/000146785826000049/gmq22026pressreleaseandfin.htm",
+   "published_at": "",
+   "period": "",
+   "accessed_at": "2026-10-17",
+   "verification": "direct_read",
+   "source_type": "filing",
+   "read_scope": "Page text read directly.",
+   "findings": "Total net sales and revenue 48,026; operating income 1,459; net income attributable to stockholders 1,305 (USD millions).",
+   "limitations": ""
+  }
+ ],
+ "kpis": [
+  {
+   "label": "2026-Q2 revenue",
+   "value": 48.026,
+   "unit": "USD billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating profit",
+   "value": 1.459,
+   "unit": "USD billion",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "status": "verified"
+  },
+  {
+   "label": "2026-Q2 operating margin",
+   "value": 3.0,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Operating profit / revenue (local calculation)",
+   "status": "qualified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "status": "qualified",
+   "source_ids": [
+    "sa_gm",
+    "sec_gm"
+   ],
+   "text": "General Motors reported 2026-Q2 revenue of USD 48.0bn and operating profit of USD 1.5bn (margin 3.0%). Q2 2026 revenue (48,026m) matches the SEC 8-K. The 8-K shows operating income 1,459m versus 1,538m in the aggregator, and net income attributable to stockholders 1,305m versus 1,287m; the 8-K operating income is used for 2026-Q2."
+  }
+ ],
+ "sections": [],
+ "opinion": {}
+}
