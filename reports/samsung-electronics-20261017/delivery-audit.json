@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "decision": "revise",
+  "delivery_allowed": false,
+  "input_sha256": "cf55e4621c3fc4c96e22d679150973205efc067ee50580a3a7bf20b17aecfc5a",
+  "preview_sha256": "583b82f8d0a6c72497cccbcaba22650493097077296ab5a15d77fa199a30122e",
+  "checked_at": "2026-10-17T02:56:43.638936+00:00",
+  "review": {
+    "reviewed_at": "2026-10-17T11:56:43+09:00",
+    "mode": "separate_review_pass",
+    "checks": {
+      "source_accuracy": {
+        "status": "revise",
+        "evidence": "뉴스룸 실적 발표 3건과 회사 IR 게시 연결재무제표 7건의 수치를 직접 대조했고 보도 수치는 원 언론 본문과 대조했습니다. 그러나 DART 반기보고서 본문·주석·검토보고서는 robots 정책으로 열람하지 못해 DART 원문 대조는 하지 못했습니다."
+      },
+      "calculations": {
+        "status": "pass",
+        "evidence": "생성 스크립트의 assert로 1·2분기 합이 반기 누계(매출 305,372,914 / 영업이익 146,725,209 / 순이익 118,370,658)와, 2025 1~3분기 합이 9개월 누계와, 2024 1~3분기 합이 9개월 누계와 일치함을 확인했고 2025-Q4 파생 영업이익 20.07조가 회사 발표 20.1조와 일치함을 확인했습니다. 이익률·순현금·상반기 현금흐름·분기 영업현금흐름 파생과 3분기 증감률을 재계산했으며 영업이익 YoY 782.5% 대 782.8% 차이는 팩트체크 표에 기록했습니다."
+      },
+      "coverage": {
+        "status": "revise",
+        "evidence": "긍정(이익·현금·장기계약)과 반대(가격 정점론·CXMT·DX 적자·보상 비용·파운드리) 논거를 본문과 오피니언에 연결했으나 DART 본문·부문정보 주석, 증권사·산업 조사 원문, SK하이닉스·마이크론 원 공시, 자기주식취득결과보고서 본문은 미열람입니다."
+      },
+      "opinion": {
+        "status": "pass",
+        "evidence": "오피니언 12문단 모두 6문장(평균 약 530자)이며 논지·근거·반론·확인 조건을 연결했고, decision_scope=research_priority로 가격 적정성·개인 비중과 분리했습니다. 작성자 본인의 별도 점검이며 독립 검토가 아닙니다."
+      },
+      "visual": {
+        "status": "revise",
+        "evidence": "구형 WebKit(wkhtmltoimage)의 근사 렌더에서 표지·KPI·차트 2종·분기 표가 넘침 없이 표시됨을 확인했습니다. 실제 브라우저의 CDN 글꼴, 모바일 폭, 나머지 섹션과 다운로드 기능은 확인하지 못했습니다."
+      }
+    },
+    "issues": [
+      {
+        "owner": "earnings-review",
+        "description": "DART 본문·주석·검토보고서 직접 열람 불가(robots 거부). 동일 접근 차단이 지속되어 재시도하지 않음.",
+        "status": "open"
+      },
+      {
+        "owner": "event-impact",
+        "description": "네이버 금융 차단. 원 언론 종가 보도로 대체했으나 네이버 대조 미완료.",
+        "status": "open"
+      },
+      {
+        "owner": "stock-report",
+        "description": "실제 브라우저 화면 감수 미완료.",
+        "status": "open"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "code": "LATEST_SEARCH_DART",
+      "owner": "goose",
+      "action": "dart의 최근 공시·기사·정정·후속 사건을 검색하고 원문 열람 또는 검색 결과 없음의 근거를 기록합니다. 차단은 완료가 아닙니다."
+    },
+    {
+      "code": "LATEST_SEARCH_NAVER",
+      "owner": "event-impact",
+      "action": "naver의 최근 공시·기사·정정·후속 사건을 검색하고 원문 열람 또는 검색 결과 없음의 근거를 기록합니다. 차단은 완료가 아닙니다."
+    },
+    {
+      "code": "DART_BODY",
+      "owner": "earnings-review",
+      "action": "DART body 원문·첨부를 직접 읽고 구간과 문서 출처를 기록합니다. IR 대체 열람만으로 완료 처리하지 않습니다."
+    },
+    {
+      "code": "DART_NOTES",
+      "owner": "earnings-review",
+      "action": "DART notes 원문·첨부를 직접 읽고 구간과 문서 출처를 기록합니다. IR 대체 열람만으로 완료 처리하지 않습니다."
+    },
+    {
+      "code": "DART_REVIEW_OR_AUDIT",
+      "owner": "earnings-review",
+      "action": "DART review_or_audit 원문·첨부를 직접 읽고 구간과 문서 출처를 기록합니다. IR 대체 열람만으로 완료 처리하지 않습니다."
+    },
+    {
+      "code": "QUARTER_HISTORY",
+      "owner": "earnings-review",
+      "action": "최근 8개 분기를 목표로 최소 6개 연속 공시 분기의 매출·영업이익을 조사합니다. 잠정치는 별도이며 누적 차감 역산은 산식을 보존합니다."
+    },
+    {
+      "code": "REVIEW_SOURCE_ACCURACY",
+      "owner": "fact-check",
+      "action": "source_accuracy 감수를 완료하고 실제 관찰·대조 결과를 기록합니다. 선언만으로 통과시키지 않습니다."
+    },
+    {
+      "code": "REVIEW_COVERAGE",
+      "owner": "fact-check",
+      "action": "coverage 감수를 완료하고 실제 관찰·대조 결과를 기록합니다. 선언만으로 통과시키지 않습니다."
+    },
+    {
+      "code": "REVIEW_VISUAL",
+      "owner": "stock-report",
+      "action": "visual 감수를 완료하고 실제 관찰·대조 결과를 기록합니다. 선언만으로 통과시키지 않습니다."
+    },
+    {
+      "code": "UNRESOLVED_ISSUE",
+      "owner": "earnings-review",
+      "action": "DART 본문·주석·검토보고서 직접 열람 불가(robots 거부). 동일 접근 차단이 지속되어 재시도하지 않음."
+    },
+    {
+      "code": "UNRESOLVED_ISSUE",
+      "owner": "event-impact",
+      "action": "네이버 금융 차단. 원 언론 종가 보도로 대체했으나 네이버 대조 미완료."
+    },
+    {
+      "code": "UNRESOLVED_ISSUE",
+      "owner": "stock-report",
+      "action": "실제 브라우저 화면 감수 미완료."
+    }
+  ],
+  "scope": "Local completeness and evidence-record consistency checks plus supplied editorial review. Not proof of factual truth or independent execution."
+}

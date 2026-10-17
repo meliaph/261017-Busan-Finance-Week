@@ -1,5 +1,10 @@
-# Auto sector monitor (pilot)
-Run:  pip install -r requirements.txt && streamlit run app.py
-Add data: python load_goose.py data.db new_file.json --country KR --segment carmaker
-(re-loading is safe; rows upsert by ticker + metric + period; missing values stay NULL)
-Files: db.py (schema), load_goose.py (JSON -> SQLite), app.py (Streamlit + Plotly), data.db (Hyundai Motor pilot, 56 records)
+# Goose report dashboard
+
+Turns the report ZIPs that the Goose skill produces into an interactive dashboard (Streamlit + Plotly).
+
+- `app.py` – the dashboard (Overview, Financials, Report, Evidence, Trust, Compare)
+- `reports/<name>/report.json` – a Goose `input.en.json` (add `delivery-audit.json` next to it for the audit view)
+- Add a company: drop its report JSON in a new folder under `reports/`, or upload the ZIP in the sidebar
+- `pilot_app.py`, `db.py`, `load_goose.py`, `data.db` – earlier SQLite pilot (Hyundai Motor), kept for reference
+
+Run locally: `pip install -r requirements.txt` then `streamlit run app.py`

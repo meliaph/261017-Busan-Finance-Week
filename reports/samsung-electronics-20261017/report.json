@@ -1,0 +1,2212 @@
+{
+ "schema_version": 1,
+ "document_type": "deep_report",
+ "company": {
+  "name": "Samsung Electronics",
+  "ticker": "005930",
+  "market": "KRX (KOSPI)"
+ },
+ "as_of": "2026-10-17",
+ "status": "limited",
+ "limitations": [
+  "The DART half-year report body, notes and review-report viewer were refused by the fetch tool under the site's robots policy and could not be read; no workaround was used. The company IR copy of the consolidated statements and review report was substituted, and the requirement for a final report on a Korean company (direct DART reading) is not met.",
+  "Even in the company IR copy, notes were extracted only to about Note 5 (inventories), so the segment note (Note 27), commitments and contingencies, subsequent events, and the breakdown of financial income and income taxes were not read.",
+  "Q3 has only the preliminary announcement (consolidated revenue and operating profit); net profit, segment profit and cash flow are not yet public. Q3 segment figures and HBM sales are broker estimates.",
+  "Naver Finance was blocked, and broker report originals, industry research bodies and the original filings of SK hynix and Micron were not read; their figures are shown from secondary reports.",
+  "The text of the treasury-stock acquisition result report (2026-10-12) and whether the cancellation was completed were not read. Fourth-quarter values are derived as full year minus nine-month cumulative, and because the 2025 half-year cash-flow comparatives differ by reporting date, no quarterly capex trend is used.",
+  "No price-attractiveness (valuation) analysis was done, and this is not a judgment reflecting personal position size, goals or loss tolerance. A single executor performed the roles in sequence; independent audit and actual browser display review are not complete."
+ ],
+ "subtitle": "Is the profit durable after Q3's preliminary KRW 107.4tn operating profit?",
+ "research_window": {
+  "mode": "current",
+  "cutoff": "2026-10-17T11:51:29+09:00",
+  "timezone": "Asia/Seoul",
+  "searches": [
+   {
+    "channel": "dart",
+    "searched_at": "2026-10-17T11:45:00+09:00",
+    "query": "Samsung Electronics half-year report 2026 DART / disclosure list",
+    "result": "blocked",
+    "source_ids": [
+     "dart_viewer"
+    ],
+    "note": "The disclosure list was read, but the half-year report and treasury-stock report bodies were refused under robots policy. Exact time not logged (performed between 11:39 and 11:51)."
+   },
+   {
+    "channel": "company_ir",
+    "searched_at": "2026-10-17T11:42:00+09:00",
+    "query": "Samsung Electronics Q2 2026 consolidated statements IR / Q3 preliminary newsroom",
+    "result": "read",
+    "source_ids": [
+     "ir_q2_26",
+     "ss_q3p",
+     "ss_q2rel"
+    ],
+    "note": "Company IR statements and newsroom results releases read directly. Time approximate (performed between 11:39 and 11:51)."
+   },
+   {
+    "channel": "naver",
+    "searched_at": "2026-10-17T11:48:00+09:00",
+    "query": "finance.naver.com Samsung Electronics stock page",
+    "result": "blocked",
+    "source_ids": [
+     "naver_fin"
+    ],
+    "note": "Site blocked; this is not a no-results finding. Time approximate."
+   },
+   {
+    "channel": "original_news",
+    "searched_at": "2026-10-17T11:49:00+09:00",
+    "query": "Samsung CXMT 4F² share fall / KOSPI close Oct 16 / foreign net selling",
+    "result": "read",
+    "source_ids": [
+     "newspim_1014",
+     "kmj_cxmt",
+     "etnews_1016",
+     "segye_flow"
+    ],
+    "note": "Last 24–72 hours of reports read in full. Time approximate (performed between 11:39 and 11:51)."
+   },
+   {
+    "channel": "industry",
+    "searched_at": "2026-10-17T11:46:00+09:00",
+    "query": "DRAM Q4 contract price outlook CXMT expansion / Micron FQ4 results",
+    "result": "read",
+    "source_ids": [
+     "newspim_peak",
+     "fnnews_micron"
+    ],
+    "note": "Read articles quoting industry research instead of the research bodies. Time approximate."
+   }
+  ]
+ },
+ "filing_coverage": {
+  "body": {
+   "status": "blocked",
+   "read_scope": "DART viewer refused under robots policy. No section read directly.",
+   "source_ids": [
+    "dart_viewer"
+   ]
+  },
+  "notes": {
+   "status": "partial",
+   "read_scope": "Notes in the company IR PDF up to about Note 5 only (segment note etc. unread); not a direct DART read.",
+   "source_ids": [
+    "ir_q2_26"
+   ]
+  },
+  "review_or_audit": {
+   "status": "read_via_company_ir",
+   "read_scope": "Body of the Samjong KPMG review report dated 2026-08-13 (inside the company IR PDF). Not read as a DART attachment.",
+   "source_ids": [
+    "ir_q2_26"
+   ]
+  }
+ },
+ "financial_history": {
+  "quarters": [
+   {
+    "period": "2024-Q3",
+    "status": "filed",
+    "revenue": 79.099,
+    "operating_profit": 9.183,
+    "net_profit": 9.782,
+    "source_ids": [
+     "ir_q3_25"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Three-month value from company IR copy"
+   },
+   {
+    "period": "2024-Q4",
+    "status": "derived",
+    "revenue": 75.788,
+    "operating_profit": 6.493,
+    "net_profit": 7.576,
+    "source_ids": [
+     "ir_fy25",
+     "ir_q3_25",
+     "calc_ledger"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Full year − nine-month cumulative"
+   },
+   {
+    "period": "2025-Q1",
+    "status": "filed",
+    "revenue": 79.141,
+    "operating_profit": 6.685,
+    "net_profit": 8.028,
+    "source_ids": [
+     "ir_q1_25"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Three-month value from company IR copy"
+   },
+   {
+    "period": "2025-Q2",
+    "status": "filed",
+    "revenue": 74.566,
+    "operating_profit": 4.676,
+    "net_profit": 4.934,
+    "source_ids": [
+     "ir_q2_25"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Three-month value from company IR copy"
+   },
+   {
+    "period": "2025-Q3",
+    "status": "filed",
+    "revenue": 86.062,
+    "operating_profit": 12.166,
+    "net_profit": 12.006,
+    "source_ids": [
+     "ir_q3_25"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Three-month value from company IR copy"
+   },
+   {
+    "period": "2025-Q4",
+    "status": "derived",
+    "revenue": 93.837,
+    "operating_profit": 20.074,
+    "net_profit": 19.292,
+    "source_ids": [
+     "ir_fy25",
+     "ir_q3_25",
+     "calc_ledger"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Full year − nine-month cumulative"
+   },
+   {
+    "period": "2026-Q1",
+    "status": "filed",
+    "revenue": 133.873,
+    "operating_profit": 57.233,
+    "net_profit": 47.101,
+    "source_ids": [
+     "ir_q1_26"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Three-month value from company IR copy"
+   },
+   {
+    "period": "2026-Q2",
+    "status": "filed",
+    "revenue": 171.499,
+    "operating_profit": 89.492,
+    "net_profit": 71.269,
+    "source_ids": [
+     "ir_q2_26"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "calculation": "Three-month value from company IR copy"
+   }
+  ],
+  "annual": [
+   {
+    "year": 2023,
+    "revenue": 258.935,
+    "operating_profit": 6.567,
+    "source_ids": [
+     "ir_fy24"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion"
+   },
+   {
+    "year": 2024,
+    "revenue": 300.871,
+    "operating_profit": 32.726,
+    "source_ids": [
+     "ir_fy24"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion"
+   },
+   {
+    "year": 2025,
+    "revenue": 333.606,
+    "operating_profit": 43.601,
+    "source_ids": [
+     "ir_fy25"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion"
+   }
+  ],
+  "preliminary": [
+   {
+    "period": "2026-Q3",
+    "status": "preliminary",
+    "revenue": 195.0,
+    "operating_profit": 107.4,
+    "source_ids": [
+     "ss_q3p"
+    ],
+    "basis": "Consolidated",
+    "unit": "KRW trillion",
+    "note": "Company preliminary figure; not counted among filed quarters"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "id": "ss_q3p",
+   "title": "Samsung Electronics announces Q3 2026 preliminary results (Korean)",
+   "publisher": "Samsung Newsroom (Korea)",
+   "published_at": "2026-10-08",
+   "period": "2026-Q3 (Jul–Sep), preliminary",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full newsroom text: consolidated revenue and operating profit, QoQ and YoY changes, note that figures are preliminary.",
+   "findings": "Consolidated revenue KRW 195tn, operating profit KRW 107.4tn. The company states QoQ +13.70% (revenue) and +20.01% (operating profit), YoY +126.59% and +782.50%. Preliminary, close not complete (IFRS estimate). No net profit, segment profit or cash flow disclosed.",
+   "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-2026%EB%85%84-3%EB%B6%84%EA%B8%B0-%EC%9E%A0%EC%A0%95%EC%8B%A4%EC%A0%81-%EB%B0%9C%ED%91%9C",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "company_statement",
+   "event_date": "2026-10-08"
+  },
+  {
+   "id": "ss_q2rel",
+   "title": "Samsung Electronics Q2 2026 results (Korean)",
+   "publisher": "Samsung Newsroom (Korea)",
+   "published_at": "2026-07-30",
+   "period": "2026-Q2 (Apr–Jun)",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full newsroom text: group and segment results, H2 outlook. Net profit, capex and shareholder-return details are not in the text.",
+   "findings": "Revenue KRW 171.5tn, operating profit KRW 89.5tn, EPS KRW 10,849. DS revenue 127.5tn / operating profit 89.2tn; DX 48tn / loss 0.8tn; Harman 4.6tn / 0.4tn; Display 7.5tn / 0.7tn. HBM4 supply expanded, first HBM4E samples shipped in the industry, System LSI record H1 revenue, Foundry improved (no profit figures). Notes higher component costs for DX in H2.",
+   "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-2026%EB%85%84-2%EB%B6%84%EA%B8%B0-%EC%8B%A4%EC%A0%81-%EB%B0%9C%ED%91%9C",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "company_statement",
+   "event_date": "2026-07-30"
+  },
+  {
+   "id": "ss_q4rel",
+   "title": "Samsung Electronics Q4 2025 results (Korean)",
+   "publisher": "Samsung Newsroom (Korea)",
+   "published_at": "2026-01-29",
+   "period": "2025-Q4 (Oct–Dec)",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full newsroom text: Q4 group and segment results and 2026 outlook. No full-year totals or net profit in the text.",
+   "findings": "Q4 revenue KRW 93.8tn, operating profit KRW 20.1tn (a quarterly record at the time). Consistent, at rounding level, with this report's derived 2025-Q4 figure (full year minus nine-month total).",
+   "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-2025%EB%85%84-4%EB%B6%84%EA%B8%B0-%EC%8B%A4%EC%A0%81-%EB%B0%9C%ED%91%9C",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "company_statement",
+   "event_date": "2026-01-29"
+  },
+  {
+   "id": "ir_q2_26",
+   "title": "Samsung Electronics Q2 2026 consolidated financial statements (company IR copy, incl. review report)",
+   "publisher": "Samsung Electronics IR",
+   "published_at": "2026-08-14 (from DART receipt number prefix; review report dated 2026-08-13)",
+   "period": "2026-Q2 and 2026-H1 (as of 2026-06-30)",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Consolidated balance sheet, income statement and cash flow statement (current and comparative periods) and the Samjong KPMG review report. Notes extracted only up to about Note 5 (inventories); segment note (Note 27), commitments, contingencies and subsequent events were not read.",
+   "findings": "Q2 (3 months) revenue 171,499,470 / operating profit 89,492,412 / profit attributable to owners 71,269,468 (KRW million). H1 operating cash flow 145,355,192; PP&E acquisition 31,234,818; intangibles 1,725,464; dividends paid 6,222,802; treasury stock acquired 13,248,625. At 30 Jun: cash 92,916,382; short-term financial instruments 97,036,646; assets 759,480,516; liabilities 180,170,840; equity 579,309,676; inventories 71,389,118; trade receivables 96,408,968. Review report: no matter found indicating material misstatement (not an audit opinion); FY2025 statements audited with an unqualified opinion dated 2026-02-12.",
+   "url": "https://images.samsung.com/kdp/ir/financial-info/2026/2026_con_quarter02_all.pdf",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing"
+  },
+  {
+   "id": "ir_q1_26",
+   "title": "Samsung Electronics Q1 2026 consolidated financial statements (company IR copy)",
+   "publisher": "Samsung Electronics IR",
+   "published_at": "2026-05 (filing date not confirmed)",
+   "period": "2026-Q1 (Jan–Mar)",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Consolidated income statement, balance sheet and cash flow summary as of 31 March.",
+   "findings": "Q1 revenue 133,873,444 / operating profit 57,232,797 / profit attributable to owners 47,101,190 (KRW million). Operating cash flow 40,274,106; PP&E acquisition 17,127,003; intangibles 1,049,952. At 31 Mar: cash 73,306,751; short-term financial instruments 74,048,085.",
+   "url": "https://images.samsung.com/kdp/ir/financial-info/2026/2026_con_quarter01_all.pdf",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing"
+  },
+  {
+   "id": "ir_q3_25",
+   "title": "Samsung Electronics Q3 2025 consolidated financial statements (company IR copy)",
+   "publisher": "Samsung Electronics IR",
+   "published_at": "2025-11 (filing date not confirmed)",
+   "period": "2025-Q3 and 2024-Q3, nine-month cumulative",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Consolidated income statement (3-month and cumulative), balance sheet and cash flow summary.",
+   "findings": "2025-Q3 revenue 86,061,747 / operating profit 12,166,062 / net profit 12,006,461; 2024-Q3 79,098,731 / 9,183,371 / 9,781,547. 9M 2024 225,082,634 / 26,233,258 / 26,045,230. 9M 2025 239,768,567 / 23,527,391 / 24,968,902. 9M operating cash flow 56,515,496.",
+   "url": "https://images.samsung.com/kdp/ir/financial-info/2025/2025_con_quarter03_all.pdf",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing"
+  },
+  {
+   "id": "ir_q2_25",
+   "title": "Samsung Electronics Q2 2025 consolidated financial statements (company IR copy)",
+   "publisher": "Samsung Electronics IR",
+   "published_at": "2025-08 (filing date not confirmed)",
+   "period": "2025-Q2 and 2024-Q2, first half",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Consolidated income statement (3 and 6 months), balance sheet and cash flow summary.",
+   "findings": "2025-Q2 revenue 74,566,317 / operating profit 4,676,057 / net profit 4,934,034; 2024-Q2 74,068,302 / 10,443,878 / 9,642,653. H1 operating cash flow 33,941,002. PP&E acquisition shown as 25,163,382 (differs from the 26,831,217 comparative in the 2026 half-year statements — possible reclassification).",
+   "url": "https://images.samsung.com/kdp/ir/financial-info/2025/2025_con_quarter02_all.pdf",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing"
+  },
+  {
+   "id": "ir_q1_25",
+   "title": "Samsung Electronics Q1 2025 consolidated financial statements (company IR copy)",
+   "publisher": "Samsung Electronics IR",
+   "published_at": "2025-05 (filing date not confirmed)",
+   "period": "2025-Q1 and 2024-Q1",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Consolidated income statement, balance sheet and cash flow summary.",
+   "findings": "2025-Q1 revenue 79,140,503 / operating profit 6,685,272 / net profit 8,028,407; 2024-Q1 71,915,601 / 6,606,009 / 6,621,030. Operating cash flow 16,580,866.",
+   "url": "https://images.samsung.com/kdp/ir/financial-info/2025/2025_con_quarter01_all.pdf",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing"
+  },
+  {
+   "id": "ir_fy25",
+   "title": "Samsung Electronics FY2025 consolidated statements summary (company IR copy, Q4 file)",
+   "publisher": "Samsung Electronics IR",
+   "published_at": "2026-02 (filing date not confirmed)",
+   "period": "FY2025 and FY2024",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Annual consolidated income statement, balance sheet and cash flow summary. Q4 three-month values are not in this file and were derived as full year minus nine-month total.",
+   "findings": "FY2025 revenue 333,605,938 / operating profit 43,601,051 / net profit 44,260,956; FY2024 300,870,903 / 32,725,961 / 33,621,363 (KRW million). 2025 operating cash flow 85,315,148; PP&E acquisition 47,522,179; intangibles 4,630,970; dividends paid 9,897,183. At 2025-12-31: cash 57,856,378; short-term financial instruments 67,965,021; total borrowings 25,239,139.",
+   "url": "https://images.samsung.com/kdp/ir/financial-info/2025/2025_con_quarter04_all.pdf",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing"
+  },
+  {
+   "id": "ir_fy24",
+   "title": "Samsung Electronics FY2024 consolidated statements summary (company IR copy, Q4 file)",
+   "publisher": "Samsung Electronics IR",
+   "published_at": "2025-03 (filing date not confirmed)",
+   "period": "FY2024 and FY2023",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Annual consolidated profit summary and total assets.",
+   "findings": "FY2023 revenue 258,935,494 / operating profit 6,566,976 / net profit 14,473,401; FY2024 300,870,903 / 32,725,961 / 33,621,363 (KRW million).",
+   "url": "https://images.samsung.com/kdp/ir/financial-info/2024/2024_con_quarter04_all.pdf",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing"
+  },
+  {
+   "id": "dart_list",
+   "title": "DART disclosure search — Samsung Electronics list (treasury-stock items etc.)",
+   "publisher": "Financial Supervisory Service DART",
+   "published_at": "2026-10-17",
+   "period": "Disclosure list, 2026-09 to 2026-10",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Page 1 of the disclosure list (titles, filing dates, receipt numbers only). No individual filing text was read.",
+   "findings": "A treasury-stock acquisition result report was filed on 2026-10-12 (receipt no. 20261012000421). Major-shareholder holding-change reports on 2026-09-18, 10-02, 10-13. The half-year report appears in the periodic-disclosure list as receipt no. 20260814003699.",
+   "url": "https://dart.fss.or.kr/dsab001/search.ax?textCrpNm=005930",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "filing",
+   "record_note": "List only; not counted as a direct read of DART filing text"
+  },
+  {
+   "id": "dart_viewer",
+   "title": "DART 2026 half-year report body, notes and review report viewer (receipt no. 20260814003699)",
+   "publisher": "Financial Supervisory Service DART",
+   "published_at": "2026-08-14 (from receipt number prefix)",
+   "period": "2026-H1",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Not read.",
+   "findings": "Not applicable (access blocked).",
+   "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003699",
+   "status": "unverified",
+   "verification": "blocked",
+   "source_type": "filing",
+   "attempts": "Tried two viewer URLs and the treasury-stock result report URL with the fetch tool; all three were refused under the site's robots policy (ROBOTS_DISALLOWED). No workaround was attempted. Substituted the company IR copy of the same-period consolidated statements and review report.",
+   "impact": "Business description, segment, commitments/contingencies and subsequent-event notes, and the details of the treasury-stock result report could not be checked, so judgments depending on them stay limited. The DART direct-read requirement for a final report on a Korean company is not met."
+  },
+  {
+   "id": "naver_fin",
+   "title": "Naver Finance — Samsung Electronics stock page",
+   "publisher": "Naver Finance",
+   "published_at": "2026-10-17",
+   "period": "Live quotes and financial summary",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Not read.",
+   "findings": "Not applicable (access blocked).",
+   "url": "https://finance.naver.com/item/main.naver?code=005930",
+   "status": "unverified",
+   "verification": "blocked",
+   "source_type": "news",
+   "attempts": "The fetch tool returned a site block (SITE_BLOCKED). Closing prices were taken from two original news reports instead.",
+   "impact": "No cross-check against Naver's financial summary. Closing prices and moves rely on news reports."
+  },
+  {
+   "id": "econovill_q3",
+   "title": "Samsung Q3 semiconductor profit estimated at about KRW 107tn; HBM sales double, DRAM prices up ~20% (Korean)",
+   "publisher": "ER Economic Review",
+   "published_at": "2026-10-08",
+   "period": "2026-Q3 estimates",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "DS operating profit estimates: Citi 107tn, DS Investment & Securities 107.6tn, Hana Securities 107.7tn. DRAM average selling price +19–21% QoQ, shipments +3–4%, HBM sales roughly doubled (DS Investment estimate). All are broker estimates, not company disclosures.",
+   "url": "https://www.econovill.com/news/articleView.html?idxno=753144",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "sedaily_dsdx",
+   "title": "The higher memory prices go, the better for DS and the worse for DX (Korean)",
+   "publisher": "Seoul Economic Daily",
+   "published_at": "2026-10-08",
+   "period": "2026-Q3 estimates",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Preliminary operating profit of KRW 107.4tn is the first above 100tn. Citi: DS about 107tn (Q2: 89.2tn). Meritz estimates: MX/Networks operating loss 0.7tn → 1.8tn; VD/Appliances loss about 0.01tn → about 0.4tn; Samsung Display profit 0.7tn → 1.1tn. Notes concern over bonus disputes between divisions.",
+   "url": "https://m.sedaily.com/article/20099735",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "fnnews_micron",
+   "title": "Riding Micron's tailwind, Samsung and SK hynix may approach KRW 650tn combined operating profit this year (Korean)",
+   "publisher": "Financial News",
+   "published_at": "2026-10-01",
+   "period": "Micron FQ4-2026 (Jun–Aug); Samsung/SK 2026 consensus",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Micron FQ4 revenue US$54.229bn, operating profit US$43.751bn. CEO says demand will exceed supply in 2027–2028; over 75% of fiscal 2027 volume already allocated. FnGuide consensus (Oct 1): Samsung 2026 operating profit KRW 384.80tn, Q3 108.68tn; SK hynix 2026 263.89tn, Q3 77.22tn.",
+   "url": "https://www.fnnews.com/news/202610011807464719",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "newsway_tp",
+   "title": "KRW 630,000 vs 270,000: where is Samsung Electronics heading, one day before results? (Korean)",
+   "publisher": "Newsway",
+   "published_at": "2026-10-07",
+   "period": "Target prices and estimates (before the sell-off)",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "FnGuide-based target prices: highest KRW 630,000 (Yuanta Securities), lowest KRW 270,000 (BNK Investment & Securities, Hold). Meritz estimates Q3 operating profit of 106.1tn and raised its 2027 operating profit estimate from 562tn to 632tn.",
+   "url": "https://www.newsway.co.kr/news/view?ud=2026100715391330549",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "sisaj_return",
+   "title": "[Samsung & SK hynix shareholder returns, Part 1] How much will Samsung's new return policy expand? (Korean)",
+   "publisher": "Sisa Journal-e (via Daum)",
+   "published_at": "2026-08-10",
+   "period": "2024–2026 shareholder-return policy",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "2024–2026 policy returns 50% of three-year free cash flow; regular dividend about KRW 9.8tn a year; quarterly dividend per share KRW 372 (Q1) and 374 (Q2). A new 2027–2029 policy is expected; special-dividend possibility; concern over bonus-related FCF drag.",
+   "url": "https://v.daum.net/v/zCCocMRfez",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "newstomato_div",
+   "title": "With SK hynix's KRW 40tn in view, eyes turn to Samsung: hopes for a '100tn special dividend' (Korean)",
+   "publisher": "News Tomato",
+   "published_at": "2026-08-21 (updated 2026-08-23)",
+   "period": "2026 shareholder-return pool",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Reporting on a company disclosure: remaining 2026 return pool estimated at about KRW 90–110tn; about 30tn is to be paid first as cash dividends including the regular Q3 dividend; the rest and the method are for the board in late January 2027. KB Securities and others mention a special dividend above 100tn (expectation).",
+   "url": "https://newstomato.com/ReadNews.aspx?no=1311016",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "newstomato_cancel",
+   "title": "Samsung to cancel KRW 14.5tn of treasury shares on the 2nd of next month (Korean)",
+   "publisher": "News Tomato",
+   "published_at": "2026-03-31 (updated 2026-04-01)",
+   "period": "Shares scheduled for cancellation on 2026-04-02",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "About KRW 14.58tn (73,359,314 common and 13,603,461 preferred shares) scheduled for cancellation on April 2; bought on 2025-02-18 and 2025-07-08. Whether cancellation was completed was not confirmed after this article.",
+   "url": "https://newstomato.com/ReadNews.aspx?no=1296174",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "sisaj_labor",
+   "title": "Strike risk averted, but Samsung bonuses leave embers: internal gaps and share payouts are variables (Korean)",
+   "publisher": "Sisa Journal-e (via Daum)",
+   "published_at": "2026-05-21",
+   "period": "May 2026 tentative wage agreement",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Tentative agreement on 2026-05-20: existing OPI kept; DS special management bonus (10.5% of business performance, no cap, paid in shares, 10 years); DX/CSS staff about KRW 6 million in shares. Some DX union members oppose and sought an injunction. Special-bonus funding up to about KRW 31.5tn (on assumed performance).",
+   "url": "https://v.daum.net/v/20260521134919233",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "mtn_bonus",
+   "title": "Samsung's bonus feast: how much will shareholders' share shrink? [Issue Check] (Korean)",
+   "publisher": "MTN (Money Today Broadcasting)",
+   "published_at": "2026-05-28",
+   "period": "Share-based bonus and treasury-share purchases",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Additional treasury-share purchases of KRW 20–25tn estimated this year (Mirae Asset: 27.3tn), up to about 90tn next year. Purchases are not counted as shareholder returns and reduce FCF; Mirae's estimate of remaining return capacity falls from 117.5tn to 103.9tn.",
+   "url": "https://news.mtn.co.kr/news-detail/2026052710305846905",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "bizwatch_hbm4",
+   "title": "Samsung's world-first HBM4 mass production breaks into Nvidia supply (Korean)",
+   "publisher": "BusinessWatch",
+   "published_at": "2026-02-12",
+   "period": "February 2026 HBM4 shipments",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Mostly company claims: first HBM4 mass production and shipment, entry into Nvidia's supply chain, 11.7Gbps. Micron announced on 2/11 that it had begun HBM4 shipments. Unnamed research firms estimate 28–30% HBM4 share. No Nvidia confirmation or yield figures.",
+   "url": "https://news.bizwatch.co.kr/article/industry/2026/02/09/0001",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "newspim_peak",
+   "title": "[CXMT's shake-up of DRAM hegemony] ④ Memory prices peak in Q4 theory: China's expansion raises 'peak earnings' worries (Korean)",
+   "publisher": "Newspim",
+   "published_at": "2026-07-22",
+   "period": "DRAM price-cycle outlook",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Morgan Stanley expects the YoY growth rate of DRAM contract prices to peak in 2026-Q4 and slow in 2027 (not a sharp price fall). CXMT held 7.67% of DRAM revenue in 2025-Q4 (4th globally); the big three still exceed 90%. One analysis says Samsung may be more exposed than SK hynix through commodity and mobile DRAM. Counterpoint: CXMT's expansion is unlikely to hurt earnings immediately.",
+   "url": "https://www.newspim.com/news/view/20260721000549",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "newspim_1014",
+   "title": "Samsung and SK hynix plunged — CXMT fell too: was the 'China chip fear' overdone? (Korean)",
+   "publisher": "Newspim",
+   "published_at": "2026-10-14",
+   "period": "Market close of 2026-10-13",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "On 10/13 Samsung Electronics fell 7.39% to KRW 232,000, SK hynix fell 10.09% to 1,443,000, KOSPI fell 5.46% to 6,035.35. CXMT's plan to release 4F² DDR5 within the year raised competition fears, but mass production, yield and customer qualification are unconfirmed.",
+   "url": "https://www.newspim.com/news/view/20261014000524",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "investing_cxmt",
+   "title": "Samsung, SK hynix fall over 3% on China's CXMT next-gen DRAM progress (Korean)",
+   "publisher": "Investing.com",
+   "published_at": "2026-10-12",
+   "period": "Market reaction on Monday 2026-10-12",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text (marked as AI-translated; body and table figures differ slightly).",
+   "findings": "CXMT plans a 4F² DDR5 RDIMM by year-end; specifications and schedule not disclosed. On 10/12 Samsung fell about 3.6–3.8% and SK hynix about 3.4%. Reports say Samsung targets sub-10nm DRAM with this design by 2028.",
+   "url": "https://kr.investing.com/news/stock-market-news/article-2122966",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "kmj_cxmt",
+   "title": "Chip stocks shaken by CXMT's '4F² DRAM' declaration; Samsung and SK highlight HBM4E (Korean)",
+   "publisher": "KMJ (kmjournal.net)",
+   "published_at": "2026-10-15 (estimated from dates in the text)",
+   "period": "October 2026 CXMT announcement and the 10/15 market",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "On 10/15 Samsung fell as much as 10.87% intraday and SK hynix 12.21%. The fall also reflected a hotter-than-expected US September CPI and CoreWeave debt worries (Philadelphia Semiconductor Index −4.30%). At SEDEX on 10/14 both firms showed HBM4E samples. Samsung presented a 16Gb 4F² test chip at ISSCC in February. CXMT disclosed no capacity, yield or customers.",
+   "url": "https://www.kmjournal.net/news/articleView.html?idxno=13822",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "etnews_1016",
+   "title": "KOSPI +2%, KOSDAQ +4% rebound: first KOSPI gain in 8 sessions (Korean)",
+   "publisher": "Electronic Times",
+   "published_at": "2026-10-16",
+   "period": "Close of 2026-10-16",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "KOSPI 5,668.05 (+2.05%), Samsung Electronics +2.62% to KRW 215,500, SK hynix +0.79% to 1,272,000. Foreign investors turned net buyers after net selling for eight sessions from 10/2 to 10/15. US rebound, eased rate-hike worries and a technical bounce cited.",
+   "url": "https://etnews.com/20261016000278",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "segye_flow",
+   "title": "As foreigners dumped KRW 16tn, retail investors scooped up KRW 7tn of Samsung and SK hynix (Korean)",
+   "publisher": "Segye Ilbo",
+   "published_at": "2026-10-17",
+   "period": "Flows, 2026-10-01 to 2026-10-15",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "10/15 closes: Samsung −9.48% to KRW 210,000, SK hynix −11.06% to 1,262,000, KOSPI −7.57% to 5,554.22 (circuit breaker). Through 10/15 foreigners net sold about KRW 16.39tn of the two stocks (SK 10.54tn, Samsung 5.85tn); through 10/14 retail net bought about 7.07tn.",
+   "url": "https://www.segye.com/newsView/20261017503199",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "topstar_1016",
+   "title": "Samsung Electronics shares up 2.62% to KRW 215,500 intraday on Oct 16 (Korean)",
+   "publisher": "Topstar News",
+   "published_at": "2026-10-16",
+   "period": "2026-10-16 intraday",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text (auto-generated format).",
+   "findings": "Shows a 52-week high of KRW 380,000 and low of 93,500. The prior-close figure does not match the stated change, so the article is used for reference only.",
+   "url": "https://www.topstarnews.net/news/articleView.html?idxno=16248758",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "ddaily_foundry",
+   "title": "Samsung Foundry must fill the Taylor fab: why the 'Tesla chip' is the bet next year (Korean)",
+   "publisher": "Digital Daily",
+   "published_at": "2026-08-19",
+   "period": "Foundry status",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text.",
+   "findings": "Taylor investment above US$37bn; Phase 1 utilization is the challenge; early 2nm yield is difficult; a roughly KRW 20tn Tesla AI5/AI6 order is an unconfirmed rumor; TSMC reportedly holds most next-generation orders from Nvidia, Apple and AMD. No loss figures.",
+   "url": "https://www.ddaily.co.kr/page/view/2026081915021003509",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "newsis_hynix",
+   "title": "'AI memory boom continues': SK hynix posts a new all-time-high Q2 (Korean)",
+   "publisher": "Newsis",
+   "published_at": "2026-07-29",
+   "period": "SK hynix 2026-Q2",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Full article text (secondary report; the company's own release could not be fetched).",
+   "findings": "Revenue about KRW 79.3tn, operating profit about 60.5tn (margin 76.3%). HBM4 mass shipments began in Q2; 2027 HBM supply talks going smoothly; long-term supply agreements with more than 10 customers; 2026 investment in the high-40-trillion range.",
+   "url": "https://www.newsis.com/view/NISX20260729_0003728008",
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "news"
+  },
+  {
+   "id": "calc_ledger",
+   "title": "Local calculation ledger (derived quarters, margins, cash flow, net cash, cross-checks)",
+   "publisher": "Goose analysis run (local)",
+   "published_at": "2026-10-17",
+   "period": "2023 to 2026-Q3 preliminary",
+   "accessed_at": "2026-10-17",
+   "read_scope": "Confirmed figures (KRW million) from the company-IR consolidated statements were used as inputs; derived quarters (full year − 9M, cumulative − cumulative), operating margins, quarterly operating cash flow and net cash were computed in Python and cross-checked against published totals. The truth of the input documents is a separate matter.",
+   "findings": "Quarter sums match published half-year and nine-month cumulative totals (operating profit 146,725,209 / 11,361,329 / 23,527,391 etc.). Derived 2025-Q4 operating profit 20,073,660 matches the company's KRW 20.1tn. Net cash = cash and equivalents + short-term financial instruments − borrowings (long-term financial assets excluded).",
+   "url": null,
+   "status": "read",
+   "verification": "direct_read",
+   "source_type": "local_calculation",
+   "artifact_ref": "samsung-calc-20261017"
+  }
+ ],
+ "kpis": [
+  {
+   "label": "Q3 operating profit (preliminary)",
+   "value": 107.4,
+   "unit": "KRW trillion",
+   "period": "2026-Q3 (Jul–Sep)",
+   "basis": "Consolidated, preliminary",
+   "definition": "Preliminary figure announced by the company on 2026-10-08; may differ from confirmed results",
+   "source_ids": [
+    "ss_q3p"
+   ],
+   "status": "verified"
+  },
+  {
+   "label": "Q2 operating margin",
+   "value": 52.2,
+   "unit": "%",
+   "period": "2026-Q2",
+   "basis": "Consolidated",
+   "definition": "Operating profit ÷ revenue (local calculation)",
+   "source_ids": [
+    "ir_q2_26",
+    "calc_ledger"
+   ],
+   "status": "verified"
+  },
+  {
+   "label": "H1 operating cash flow",
+   "value": 145.4,
+   "unit": "KRW trillion",
+   "period": "2026-H1",
+   "basis": "Consolidated",
+   "definition": "Operating cash flow per the cash flow statement",
+   "source_ids": [
+    "ir_q2_26"
+   ],
+   "status": "verified"
+  },
+  {
+   "label": "Cash + short-term financial instruments",
+   "value": 190.0,
+   "unit": "KRW trillion",
+   "period": "As of 2026-06-30",
+   "basis": "Consolidated",
+   "definition": "Cash and equivalents plus short-term financial instruments (borrowings of KRW 22.4tn shown separately)",
+   "source_ids": [
+    "ir_q2_26",
+    "calc_ledger"
+   ],
+   "status": "verified"
+  }
+ ],
+ "summary": [
+  {
+   "type": "paragraph",
+   "text": "Samsung Electronics announced preliminary Q3 2026 consolidated operating profit of KRW 107.4tn on revenue of KRW 195tn. Operating profit rose from KRW 89.5tn in the previous quarter and exceeded KRW 100tn for the first time; the figure is preliminary, before the close is finished.",
+   "source_ids": [
+    "ss_q3p",
+    "ir_q2_26",
+    "sedaily_dsdx"
+   ],
+   "status": "verified",
+   "highlights": [
+    "KRW 107.4tn"
+   ]
+  },
+  {
+   "type": "paragraph",
+   "text": "This report's judgment is 'Add to Watchlist' with medium confidence. That is a research priority, not a buy or sell opinion or a judgment on position size, and no price-attractiveness analysis was done this time. The strongest counter-evidence is that profit leans heavily on memory prices and that the DS division produces virtually all operating profit.",
+   "source_ids": [
+    "ss_q2rel",
+    "newspim_peak",
+    "calc_ledger"
+   ],
+   "status": "inference"
+  },
+  {
+   "type": "paragraph",
+   "text": "Access to the DART body and notes was refused, so the consolidated statements and review report published by the company's IR were used instead; the segment note and the text of treasury-share filings could not be checked. This document is therefore a reviewed draft with research limits and is not a final report.",
+   "source_ids": [
+    "dart_viewer",
+    "ir_q2_26"
+   ],
+   "status": "qualified",
+   "qualification": "Direct read of the DART body and notes failed"
+  }
+ ],
+ "sections": [
+  {
+   "title": "Business and revenue structure",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Samsung Electronics reports results by the DS division (semiconductors), the DX division (mobile, TV and appliances), its subsidiary Harman and Samsung Display (labelled 'Display' by the company). In Q2 2026, DS posted revenue of KRW 127.5tn and operating profit of KRW 89.2tn, generating virtually all of the consolidated operating profit of KRW 89.5tn, while DX recorded revenue of KRW 48tn with an operating loss of KRW 0.8tn.",
+     "source_ids": [
+      "ss_q2rel"
+     ],
+     "status": "verified",
+     "highlights": [
+      "KRW 89.2tn"
+     ]
+    },
+    {
+     "type": "table",
+     "title": "Q2 2026 results by segment",
+     "period": "2026-Q2 (Apr–Jun)",
+     "unit": "KRW trillion (margin in %, local calculation)",
+     "basis": "Company-reported segment figures; segment revenues are before intra-group eliminations and do not sum to consolidated revenue",
+     "headers": [
+      "Segment",
+      "Revenue",
+      "Operating profit",
+      "Operating margin"
+     ],
+     "rows": [
+      [
+       "DS (semiconductors)",
+       127.5,
+       89.2,
+       "70.0%"
+      ],
+      [
+       "DX (mobile, TV, appliances)",
+       48.0,
+       -0.8,
+       "-1.7%"
+      ],
+      [
+       "Harman",
+       4.6,
+       0.4,
+       "8.7%"
+      ],
+      [
+       "Display",
+       7.5,
+       0.7,
+       "9.3%"
+      ],
+      [
+       "Consolidated total",
+       171.5,
+       89.5,
+       "52.2%"
+      ]
+     ],
+     "source_ids": [
+      "ss_q2rel",
+      "calc_ledger"
+     ],
+     "status": "verified"
+    },
+    {
+     "type": "paragraph",
+     "text": "Segment operating profits (89.2 − 0.8 + 0.4 + 0.7) add up to the consolidated KRW 89.5tn within rounding. Segment revenues, by contrast, add up to KRW 187.6tn, above the consolidated KRW 171.5tn, because intra-group transactions are eliminated on consolidation; summing segment revenue to compute shares would be misleading.",
+     "source_ids": [
+      "ss_q2rel",
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "inference"
+    },
+    {
+     "type": "paragraph",
+     "text": "Within DX, the company said mobile (MX) revenue rose year on year on Galaxy S26 and A-series sales but profit fell on higher component costs, and appliances revenue rose quarter on quarter while profit fell on costs. The same memory-price increase is a profit for the chip division and a cost for the set businesses, and both sit inside one company.",
+     "source_ids": [
+      "ss_q2rel"
+     ],
+     "status": "verified"
+    },
+    {
+     "type": "paragraph",
+     "text": "Segment figures for Q3 have not been released. The preliminary announcement contains only consolidated revenue and operating profit, so all Q3 segment figures below are broker estimates and are labelled as such.",
+     "source_ids": [
+      "ss_q3p",
+      "sedaily_dsdx"
+     ],
+     "status": "qualified",
+     "qualification": "Q3 segment figures are not company-reported and are broker estimates"
+    }
+   ]
+  },
+  {
+   "title": "How earnings have changed",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Across the latest eight filed quarters (2024-Q3 to 2026-Q2), revenue rose from KRW 79.1tn to KRW 171.5tn and operating profit from KRW 9.2tn to KRW 89.5tn. Operating profit has risen quarter on quarter every quarter since the KRW 4.7tn low in 2025-Q2, and including the preliminary Q3 figure (KRW 107.4tn) that is the fifth consecutive increase.",
+     "source_ids": [
+      "ir_q3_25",
+      "ir_q2_25",
+      "ir_q1_25",
+      "ir_fy25",
+      "ir_q1_26",
+      "ir_q2_26",
+      "calc_ledger",
+      "ss_q3p"
+     ],
+     "status": "verified",
+     "highlights": [
+      "KRW 107.4tn"
+     ]
+    },
+    {
+     "type": "chart",
+     "kind": "bar",
+     "title": "Quarterly revenue and operating profit",
+     "period": "2024-Q3 to 2026-Q2 (eight filed quarters)",
+     "unit": "KRW trillion",
+     "basis": "Consolidated",
+     "categories": [
+      "2024-Q3",
+      "2024-Q4",
+      "2025-Q1",
+      "2025-Q2",
+      "2025-Q3",
+      "2025-Q4",
+      "2026-Q1",
+      "2026-Q2"
+     ],
+     "series": [
+      {
+       "label": "Revenue",
+       "values": [
+        79.1,
+        75.79,
+        79.14,
+        74.57,
+        86.06,
+        93.84,
+        133.87,
+        171.5
+       ]
+      },
+      {
+       "label": "Operating profit",
+       "values": [
+        9.18,
+        6.49,
+        6.69,
+        4.68,
+        12.17,
+        20.07,
+        57.23,
+        89.49
+       ]
+      }
+     ],
+     "source_ids": [
+      "ir_q3_25",
+      "ir_q2_25",
+      "ir_q1_25",
+      "ir_fy25",
+      "ir_q1_26",
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "verified",
+     "purpose": "revenue_profit"
+    },
+    {
+     "type": "chart",
+     "kind": "line",
+     "title": "Quarterly operating and net margins",
+     "period": "2024-Q3 to 2026-Q2",
+     "unit": "%",
+     "basis": "Consolidated; net profit attributable to owners",
+     "categories": [
+      "2024-Q3",
+      "2024-Q4",
+      "2025-Q1",
+      "2025-Q2",
+      "2025-Q3",
+      "2025-Q4",
+      "2026-Q1",
+      "2026-Q2"
+     ],
+     "series": [
+      {
+       "label": "Operating margin",
+       "values": [
+        11.6,
+        8.6,
+        8.4,
+        6.3,
+        14.1,
+        21.4,
+        42.8,
+        52.2
+       ]
+      },
+      {
+       "label": "Net margin (owners)",
+       "values": [
+        12.4,
+        10.0,
+        10.1,
+        6.6,
+        14.0,
+        20.6,
+        35.2,
+        41.6
+       ]
+      }
+     ],
+     "source_ids": [
+      "ir_q3_25",
+      "ir_q2_25",
+      "ir_q1_25",
+      "ir_fy25",
+      "ir_q1_26",
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "verified",
+     "purpose": "margins"
+    },
+    {
+     "type": "table",
+     "title": "Quarterly ledger and Q3 preliminary figures",
+     "period": "2024-Q3 to 2026-Q3",
+     "unit": "KRW trillion (margins in %)",
+     "basis": "Consolidated. Q4 values are derived as full year minus nine-month cumulative; the Q3 preliminary figure is pre-close and has no net profit",
+     "headers": [
+      "Quarter",
+      "Type",
+      "Revenue",
+      "Operating profit",
+      "Operating margin",
+      "Net profit (owners)"
+     ],
+     "rows": [
+      [
+       "2024-Q3",
+       "Filed",
+       79.1,
+       9.2,
+       "11.6%",
+       9.8
+      ],
+      [
+       "2024-Q4",
+       "Derived (full year − cumulative)",
+       75.8,
+       6.5,
+       "8.6%",
+       7.6
+      ],
+      [
+       "2025-Q1",
+       "Filed",
+       79.1,
+       6.7,
+       "8.4%",
+       8.0
+      ],
+      [
+       "2025-Q2",
+       "Filed",
+       74.6,
+       4.7,
+       "6.3%",
+       4.9
+      ],
+      [
+       "2025-Q3",
+       "Filed",
+       86.1,
+       12.2,
+       "14.1%",
+       12.0
+      ],
+      [
+       "2025-Q4",
+       "Derived (full year − cumulative)",
+       93.8,
+       20.1,
+       "21.4%",
+       19.3
+      ],
+      [
+       "2026-Q1",
+       "Filed",
+       133.9,
+       57.2,
+       "42.8%",
+       47.1
+      ],
+      [
+       "2026-Q2",
+       "Filed",
+       171.5,
+       89.5,
+       "52.2%",
+       71.3
+      ],
+      [
+       "2026-Q3",
+       "Preliminary (company, pre-close)",
+       195.0,
+       107.4,
+       "55.1%",
+       null
+      ]
+     ],
+     "source_ids": [
+      "ir_q3_25",
+      "ir_q2_25",
+      "ir_q1_25",
+      "ir_fy25",
+      "ir_q1_26",
+      "ir_q2_26",
+      "calc_ledger",
+      "ss_q3p"
+     ],
+     "status": "verified"
+    },
+    {
+     "type": "table",
+     "title": "Last three fiscal years",
+     "period": "2023 to 2025",
+     "unit": "KRW trillion (margins in %)",
+     "basis": "Consolidated",
+     "headers": [
+      "Year",
+      "Revenue",
+      "Operating profit",
+      "Operating margin",
+      "Net profit (owners)"
+     ],
+     "rows": [
+      [
+       "2023",
+       258.9,
+       6.6,
+       "2.5%",
+       14.5
+      ],
+      [
+       "2024",
+       300.9,
+       32.7,
+       "10.9%",
+       33.6
+      ],
+      [
+       "2025",
+       333.6,
+       43.6,
+       "13.1%",
+       44.3
+      ]
+     ],
+     "source_ids": [
+      "ir_fy24",
+      "ir_fy25",
+      "calc_ledger"
+     ],
+     "status": "verified"
+    },
+    {
+     "type": "paragraph",
+     "text": "Preliminary Q3 revenue of KRW 195tn is up 13.7% from the previous quarter and 126.6% from a year earlier, and operating profit is up 20.0% from the previous quarter. The company states a year-on-year operating-profit increase of 782.50%, whereas recomputing from the rounded KRW 107.4tn gives about 782.8%, which suggests the company calculated from unrounded values. Against the FnGuide consensus of KRW 108.7tn for Q3 operating profit, the preliminary figure is about 1.2% lower.",
+     "source_ids": [
+      "ss_q3p",
+      "ir_q2_26",
+      "ir_q3_25",
+      "fnnews_micron",
+      "calc_ledger"
+     ],
+     "status": "qualified",
+     "qualification": "Consensus is the FnGuide aggregate as reported on 10/1; the rounding explanation is the author's inference"
+    }
+   ]
+  },
+  {
+   "title": "Composition and repeatability of profit",
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": "Gross margin rose from 34.2% in 2025-Q2 to 61.2% in 2026-Q1 and 69.6% in 2026-Q2. Over that period cost of sales grew only about 6%, from KRW 49.1tn to KRW 52.2tn, while revenue grew 2.3-fold, so nearly all of the profit increase can be read as coming from selling prices and product mix rather than cost cuts.",
+     "source_ids": [
+      "ir_q2_25",
+      "ir_q1_26",
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "inference"
+    },
+    {
+     "type": "paragraph",
+     "text": "For Q3, brokers estimate that average DRAM selling prices rose 19–21% quarter on quarter while shipments grew 3–4%, and that HBM sales roughly doubled. These point to a price effect larger than a volume effect, but they are estimates and not figures confirmed by the company.",
+     "source_ids": [
+      "econovill_q3",
+      "sedaily_dsdx"
+     ],
+     "status": "qualified",
+     "qualification": "Broker estimates that may differ from the confirmed results"
+    },
+    {
+     "type": "paragraph",
+     "text": "Net profit runs at about 80% of operating profit (82.3% in 2026-Q1 and 79.6% in Q2), and nothing unusual in the conversion from operating to net profit appeared in the range read. However, the notes breaking down financial income, equity-method gains and income taxes were not read, so the absence of one-off items is not asserted.",
+     "source_ids": [
+      "ir_q1_26",
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "inference"
+    },
+    {
+     "type": "paragraph",
+     "text": "Whether the profit can repeat depends on the price cycle. Annual operating margin was 2.5% in 2023, 10.9% in 2024 and 13.1% in 2025, then reached 52.2% in 2026-Q2; margins in the same business have moved more than twenty-fold in three years, which shows how volatile they can be.",
+     "source_ids": [
+      "ir_fy24",
+      "ir_fy25",
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "inference"
+    }
+   ]
+  },
+  {
+   "title": "Financial capacity and cash flow",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Balance sheet summary",
+     "period": "2026-06-30 and 2025-12-31",
+     "unit": "KRW trillion",
+     "basis": "Consolidated",
+     "headers": [
+      "Item",
+      "2026-06-30",
+      "2025-12-31"
+     ],
+     "rows": [
+      [
+       "Cash and cash equivalents",
+       92.9,
+       57.9
+      ],
+      [
+       "Short-term financial instruments",
+       97.0,
+       68.0
+      ],
+      [
+       "Cash + short-term financial instruments",
+       190.0,
+       125.8
+      ],
+      [
+       "Borrowings (short-term, current portion, long-term, bonds)",
+       22.4,
+       25.2
+      ],
+      [
+       "Net cash (local calculation, excl. long-term financial assets)",
+       167.5,
+       100.6
+      ],
+      [
+       "Total assets",
+       759.5,
+       566.9
+      ],
+      [
+       "Total liabilities",
+       180.2,
+       130.6
+      ],
+      [
+       "Total equity",
+       579.3,
+       436.3
+      ]
+     ],
+     "source_ids": [
+      "ir_q2_26",
+      "ir_fy25",
+      "calc_ledger"
+     ],
+     "status": "verified"
+    },
+    {
+     "type": "table",
+     "title": "First-half cash flow",
+     "period": "2026-H1 and 2025-H1",
+     "unit": "KRW trillion",
+     "basis": "Consolidated. The 2025-H1 comparatives are as shown in the 2026 half-year statements (the original 2025 half-year file shows PP&E acquisition of KRW 25.2tn, so reclassification is possible)",
+     "headers": [
+      "Item",
+      "2026-H1",
+      "2025-H1"
+     ],
+     "rows": [
+      [
+       "Operating cash flow",
+       145.4,
+       33.9
+      ],
+      [
+       "PP&E acquisition",
+       31.2,
+       26.8
+      ],
+      [
+       "Intangible asset acquisition",
+       1.7,
+       2.0
+      ],
+      [
+       "Operating cash flow − (PP&E + intangibles), local calculation",
+       112.4,
+       5.1
+      ],
+      [
+       "Dividends paid",
+       6.2,
+       5.0
+      ],
+      [
+       "Treasury stock acquired",
+       13.2,
+       4.3
+      ]
+     ],
+     "source_ids": [
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "verified"
+    },
+    {
+     "type": "chart",
+     "kind": "bar",
+     "title": "Quarterly operating cash flow vs operating profit",
+     "period": "2025-Q1 to 2026-Q2",
+     "unit": "KRW trillion",
+     "basis": "Consolidated; cash flow derived by differencing cumulative statements",
+     "categories": [
+      "2025-Q1",
+      "2025-Q2",
+      "2025-Q3",
+      "2025-Q4",
+      "2026-Q1",
+      "2026-Q2"
+     ],
+     "series": [
+      {
+       "label": "Operating cash flow",
+       "values": [
+        16.58,
+        17.36,
+        22.57,
+        28.8,
+        40.27,
+        105.08
+       ]
+      },
+      {
+       "label": "Operating profit",
+       "values": [
+        6.69,
+        4.68,
+        12.17,
+        20.07,
+        57.23,
+        89.49
+       ]
+      }
+     ],
+     "source_ids": [
+      "ir_q1_25",
+      "ir_q2_25",
+      "ir_q3_25",
+      "ir_fy25",
+      "ir_q1_26",
+      "ir_q2_26",
+      "calc_ledger"
+     ],
+     "status": "verified",
+     "purpose": "cashflow"
+    },
+    {
+     "type": "paragraph",
+     "text": "Operating cash flow was 70% of operating profit in 2026-Q1, 117% in Q2 and 99% for the first half, against 196% for full-year 2025. Because the business has heavy depreciation, cash flow normally exceeds operating profit, so the 99% in the first half hints that part of the profit growth may have been tied up in receivables, inventory or taxes. Trade receivables were KRW 96.4tn and inventories KRW 71.4tn at end-June, but their change from year-end was not checked, so no cause is asserted.",
+     "source_ids": [
+      "ir_q1_26",
+      "ir_q2_26",
+      "ir_fy25",
+      "calc_ledger"
+     ],
+     "status": "inference"
+    }
+   ]
+  },
+  {
+   "title": "Industry, competitors, growth thesis and counter-evidence",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Three memory makers compared",
+     "period": "2026-Q2 to latest",
+     "unit": "Units stated in each cell",
+     "basis": "Samsung consolidated and DS division / SK hynix consolidated (secondary report) / Micron on its fiscal year (currency, period and business scope differ)",
+     "headers": [
+      "Item",
+      "Samsung (consolidated)",
+      "Samsung DS",
+      "SK hynix",
+      "Micron"
+     ],
+     "rows": [
+      [
+       "Fiscal period",
+       "2026-Q2 (Apr–Jun)",
+       "2026-Q2 (Apr–Jun)",
+       "2026-Q2 (Apr–Jun)",
+       "FQ4-2026 (Jun–Aug)"
+      ],
+      [
+       "Revenue",
+       "KRW 171.5tn",
+       "KRW 127.5tn",
+       "about KRW 79.3tn",
+       "US$54.229bn"
+      ],
+      [
+       "Operating profit",
+       "KRW 89.5tn",
+       "KRW 89.2tn",
+       "about KRW 60.5tn",
+       "US$43.751bn"
+      ],
+      [
+       "Operating margin",
+       "52.2%",
+       "70.0%",
+       "76.3% (as reported)",
+       "80.7% (local calculation)"
+      ],
+      [
+       "Latest quarter (Jul–Sep)",
+       "Preliminary revenue KRW 195tn, operating profit KRW 107.4tn",
+       "Estimated about KRW 107tn (Citi, undisclosed)",
+       "Consensus operating profit KRW 77.2tn (not yet reported)",
+       "Not applicable (different fiscal year)"
+      ]
+     ],
+     "source_ids": [
+      "ss_q2rel",
+      "ss_q3p",
+      "newsis_hynix",
+      "fnnews_micron",
+      "econovill_q3",
+      "calc_ledger"
+     ],
+     "status": "qualified",
+     "qualification": "Periods, currencies and business scope differ, so this is not a like-for-like comparison; SK hynix and Micron figures come from secondary reports"
+    },
+    {
+     "type": "paragraph",
+     "text": "The core of the growth thesis is that AI server demand keeps outrunning memory supply for a long stretch. Micron said demand will exceed supply in 2027–2028, and SK hynix said it has finished talks on long-term supply agreements, typically five years, with more than ten customers; both support the thesis.",
+     "source_ids": [
+      "fnnews_micron",
+      "newsis_hynix"
+     ],
+     "status": "qualified",
+     "qualification": "Statements are management outlooks and were not independently verified"
+    },
+    {
+     "type": "paragraph",
+     "text": "On the counter side, Morgan Stanley expects the year-on-year growth rate of DRAM contract prices to peak in 2026-Q4, and China's CXMT, which is still adding capacity (7.67% of DRAM revenue in 2025-Q4), is cited as a supply variable. One analysis also says Samsung may have greater short-term exposure than HBM-centred SK hynix because of its higher share of commodity and mobile DRAM sold to Chinese customers.",
+     "source_ids": [
+      "newspim_peak"
+     ],
+     "status": "qualified",
+     "qualification": "Broker and press analysis; the timing of the price peak is a forecast"
+    },
+    {
+     "type": "paragraph",
+     "text": "In HBM, Samsung said it was first in the industry to ship HBM4 in volume in February and first to ship HBM4E samples in Q2. However, Nvidia supply and a 28–30% HBM4 share rest on reports and unnamed market-research estimates, and SK hynix also began HBM4 mass shipments in Q2, so the competition is ongoing.",
+     "source_ids": [
+      "ss_q2rel",
+      "bizwatch_hbm4",
+      "newsis_hynix"
+     ],
+     "status": "qualified",
+     "qualification": "Nvidia supply and share are company claims and unnamed estimates; customer confirmation not read"
+    },
+    {
+     "type": "paragraph",
+     "text": "CXMT said at an event in Shanghai in October that it would show server DDR5 based on a 4F² cell structure within the year, but it disclosed no specifications, yield, mass-production schedule or customers. Samsung presented a 16Gb 4F² test chip at ISSCC in February and is reported to target sub-10nm DRAM mass production by 2028, so there is no evidence that Samsung is simply behind in this technology race.",
+     "source_ids": [
+      "investing_cxmt",
+      "kmj_cxmt",
+      "newspim_1014"
+     ],
+     "status": "qualified",
+     "qualification": "CXMT's mass production and customer qualification are unconfirmed; Samsung's target date is as reported"
+    }
+   ]
+  },
+  {
+   "title": "Filings, news and recent events",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Timeline of key events",
+     "period": "2026-02 to 2026-10-16",
+     "unit": "Not applicable",
+     "basis": "By event date (announcement date and covered period kept separate)",
+     "headers": [
+      "Event date",
+      "Event",
+      "Type",
+      "Level of confirmation"
+     ],
+     "rows": [
+      [
+       "2026-02-12",
+       "HBM4 mass-production shipments reported (largely company claims)",
+       "News",
+       "No Nvidia confirmation or yield figures"
+      ],
+      [
+       "2026-03-31",
+       "Report that about KRW 14.58tn of treasury shares would be cancelled on 4/2",
+       "News",
+       "Completion not confirmed in DART follow-up records"
+      ],
+      [
+       "2026-05-20 to 27",
+       "Tentative wage/bonus agreement (5/20), approved by union members (5/27)",
+       "News",
+       "Agreement and approval per reports"
+      ],
+      [
+       "2026-07-30",
+       "Q2 results (revenue KRW 171.5tn, operating profit 89.5tn)",
+       "Company",
+       "Read directly"
+      ],
+      [
+       "2026-08-14",
+       "Half-year report filed (receipt no. 20260814003699)",
+       "Filing",
+       "Body not read (access refused); company IR statements used instead"
+      ],
+      [
+       "2026-08-21",
+       "Reports on a disclosure estimating KRW 90–110tn of remaining 2026 return pool",
+       "News",
+       "Disclosure text not read"
+      ],
+      [
+       "2026-10-08",
+       "Q3 preliminary results (revenue KRW 195tn, operating profit 107.4tn)",
+       "Company",
+       "Read directly; pre-close"
+      ],
+      [
+       "2026-10-10 to 12",
+       "CXMT remarks on 4F² DDR5 by year-end and the share-price reaction",
+       "News",
+       "Specifications and mass production undisclosed"
+      ],
+      [
+       "2026-10-12",
+       "Treasury-stock acquisition result report filed (receipt no. 20261012000421)",
+       "Filing",
+       "Title seen in the list only; body not read"
+      ],
+      [
+       "2026-10-13",
+       "Samsung −7.39% to KRW 232,000; KOSPI −5.46%",
+       "News",
+       "Closing prices from original press"
+      ],
+      [
+       "2026-10-15",
+       "Samsung −9.48% to KRW 210,000; KOSPI −7.57% (circuit breaker)",
+       "News",
+       "Closing prices from original press"
+      ],
+      [
+       "2026-10-16",
+       "Samsung +2.62% to KRW 215,500; KOSPI +2.05%",
+       "News",
+       "Closing prices from original press"
+      ]
+     ],
+     "source_ids": [
+      "bizwatch_hbm4",
+      "newstomato_cancel",
+      "sisaj_labor",
+      "mtn_bonus",
+      "ss_q2rel",
+      "dart_list",
+      "newstomato_div",
+      "ss_q3p",
+      "investing_cxmt",
+      "newspim_1014",
+      "segye_flow",
+      "etnews_1016"
+     ],
+     "status": "qualified",
+     "qualification": "Level of confirmation is given per row in the last column; news-based rows are not yet checked against the original filing"
+    },
+    {
+     "type": "paragraph",
+     "text": "The biggest change in the last few days is the market, not earnings. Samsung's shares fell from about KRW 252,000 on October 12 to a close of KRW 210,000 on the 15th (−7.39% on the 13th and −9.48% on the 15th), and foreign investors, after eight straight sessions of net selling from October 2 to 15, turned net buyers on the 16th. Besides the CXMT news, a hotter-than-expected US September CPI and debt worries at AI cloud provider CoreWeave were also cited.",
+     "source_ids": [
+      "newspim_1014",
+      "segye_flow",
+      "etnews_1016",
+      "kmj_cxmt"
+     ],
+     "status": "qualified",
+     "qualification": "The causes are several reported factors; their relative weight is not established"
+    },
+    {
+     "type": "paragraph",
+     "text": "Treasury shares need to be separated into resolution, individual execution, completed acquisition and completed cancellation. A March 31 report said KRW 14.58tn of shares would be cancelled on April 2, and the DART list confirms that a treasury-stock acquisition result report was filed on October 12, but whether the cancellation was actually completed and the size of the acquisition in the October report could not be checked because the filing text was not read.",
+     "source_ids": [
+      "newstomato_cancel",
+      "dart_list",
+      "dart_viewer"
+     ],
+     "status": "qualified",
+     "qualification": "Later stages unconfirmed because DART text access was refused"
+    }
+   ]
+  },
+  {
+   "title": "Fact-check results",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Key claims checked",
+     "period": "As of 2026-10-17, within the range read directly",
+     "unit": "Not applicable",
+     "basis": "Verdict per item in the table",
+     "headers": [
+      "Claim",
+      "Verdict",
+      "Basis and limits"
+     ],
+     "rows": [
+      [
+       "Q3 operating profit of KRW 107.4tn",
+       "Confirmed (company, preliminary)",
+       "Newsroom text read directly. One search-result title (body not read) shows '1074tn', which looks like a typo for 107.4tn and is not cited."
+      ],
+      [
+       "Q1 + Q2 = half-year cumulative",
+       "Calculation matches",
+       "Revenue 133.87 + 171.50 = 305.37tn and operating profit 57.23 + 89.49 = 146.73tn match the published H1 totals."
+      ],
+      [
+       "Q4 2025 operating profit KRW 20.1tn",
+       "Calculation matches",
+       "Full year 43.60tn − nine months 23.53tn = 20.07tn, matching the company's 20.1tn."
+      ],
+      [
+       "Q3 growth rates (+13.7%, +20.0%, +126.6%)",
+       "Recalculation matches",
+       "Only the YoY operating-profit rate differs: company 782.50% vs 782.8% recomputed from rounded values (0.3pp, attributed to rounding)."
+      ],
+      [
+       "Q3 DS operating profit of about KRW 107tn",
+       "Estimate (not company-reported)",
+       "Citi, DS Investment and Hana Securities estimates (107.0–107.7tn). Not treated as fact until confirmed segment figures appear."
+      ],
+      [
+       "Samsung supplies HBM4 to Nvidia",
+       "Qualified",
+       "Based on company claims and reports; Nvidia confirmation not read."
+      ],
+      [
+       "Samsung HBM4 share of 28–30%",
+       "Unverified",
+       "Estimate from an unnamed market-research source."
+      ],
+      [
+       "Tesla order of about KRW 20tn",
+       "Unconfirmed rumor",
+       "Reported as Samsung 'exploring cooperation'; no contract evidence."
+      ],
+      [
+       "CXMT has overtaken Samsung and SK",
+       "Insufficient evidence",
+       "Specifications, yield, mass production and customers of 4F² DDR5 are all undisclosed. Samsung has also shown a 4F² test chip."
+      ],
+      [
+       "52-week high of KRW 380,000",
+       "Reference only",
+       "Figure from a single auto-generated article whose prior-close figure does not match its stated change."
+      ],
+      [
+       "KRW 14.58tn treasury-share cancellation",
+       "Scheduled cancellation confirmed in reports",
+       "Completion not confirmed in follow-up DART records."
+      ]
+     ],
+     "source_ids": [
+      "ss_q3p",
+      "ir_q2_26",
+      "ir_q1_26",
+      "ir_fy25",
+      "ir_q3_25",
+      "ss_q4rel",
+      "econovill_q3",
+      "bizwatch_hbm4",
+      "ddaily_foundry",
+      "investing_cxmt",
+      "kmj_cxmt",
+      "topstar_1016",
+      "newstomato_cancel",
+      "calc_ledger"
+     ],
+     "status": "qualified",
+     "qualification": "Verdicts reflect only what was read directly; the DART text that could not be read was not cross-checked"
+    },
+    {
+     "type": "paragraph",
+     "text": "This cross-check was a self-review in which a single executor performed the roles one after another, not an independent agent's review. Figures were cross-checked through consistency of totals across company-IR statements, but that shows the different reports are internally consistent, not that they match the DART originals.",
+     "source_ids": [
+      "calc_ledger",
+      "dart_viewer"
+     ],
+     "status": "qualified",
+     "qualification": "DART original cross-check not completed"
+    }
+   ]
+  },
+  {
+   "title": "Scenarios and what would change the view",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Scenarios and indicators (not price or probability forecasts)",
+     "period": "2026-Q4 to 2027",
+     "unit": "Not applicable",
+     "basis": "Qualitative scenarios",
+     "headers": [
+      "Scenario",
+      "Premise",
+      "Indicators to watch",
+      "Effect on the judgment"
+     ],
+     "rows": [
+      [
+       "Memory boom extends",
+       "AI server demand keeps outrunning supply and long-term agreements support prices",
+       "Q4 DRAM and NAND contract-price growth, long-term agreement pricing terms, HBM share of revenue",
+       "Strengthens the earnings-durability thesis; basis to raise research priority"
+      ],
+      [
+       "Growth rate peaks, then plateaus",
+       "Prices stay high but YoY growth slows",
+       "Rate of price change, quarterly operating margin, inventory and receivables trend",
+       "Profit level holds, but markets react to rates of change, so share-price volatility may rise"
+      ],
+      [
+       "Supply grows and prices fall",
+       "Chinese expansion and 4F² mass production are confirmed and demand softens",
+       "CXMT mass production and customer qualification, falling DRAM average selling price, customer inventory adjustment",
+       "Given the fixed-cost structure, profit can fall faster than prices; basis to lower research priority"
+      ]
+     ],
+     "source_ids": [
+      "newspim_peak",
+      "fnnews_micron",
+      "newsis_hynix",
+      "kmj_cxmt",
+      "newspim_1014"
+     ],
+     "status": "inference"
+    },
+    {
+     "type": "paragraph",
+     "text": "This table gives no target price or probabilities. Which scenario materializes will be revealed in order by the confirmed Q3 results, the Q4 price path, news on CXMT's mass production and the board's return decision at the end of January 2027.",
+     "source_ids": [
+      "newstomato_div",
+      "ss_q3p"
+     ],
+     "status": "inference"
+    }
+   ]
+  },
+  {
+   "title": "Research path, evidence level and limits",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Results by research channel",
+     "period": "Research on 2026-10-17",
+     "unit": "Not applicable",
+     "basis": "By whether the material was read",
+     "headers": [
+      "Channel",
+      "Result",
+      "Notes"
+     ],
+     "rows": [
+      [
+       "DART periodic report body, notes and review report",
+       "Access blocked (robots refusal)",
+       "Direct read failed; no workaround used. Final-report requirement not met"
+      ],
+      [
+       "DART disclosure list",
+       "Read directly (list only)",
+       "Titles and receipt numbers of treasury-stock reports etc.; bodies not read"
+      ],
+      [
+       "Company IR consolidated statements",
+       "Read directly (partial)",
+       "Income statement, balance sheet, cash flow and review report read; notes extracted only to about Note 5"
+      ],
+      [
+       "Company newsroom results releases",
+       "Read directly",
+       "Q3 preliminary, Q2, and Q4 2025"
+      ],
+      [
+       "Naver Finance",
+       "Blocked",
+       "Quotes replaced by original-press closing-price reports"
+      ],
+      [
+       "Original press",
+       "Read directly (many)",
+       "Flows, prices and analysis articles. Reprints of the same event are not counted as independent evidence"
+      ],
+      [
+       "Industry research (TrendForce etc.)",
+       "Body not read",
+       "Only search snippets seen; not used in the report"
+      ],
+      [
+       "Broker report originals",
+       "Not read",
+       "Target prices and estimates used only as quoted in articles"
+      ],
+      [
+       "SK hynix and Micron original filings",
+       "Not read",
+       "Shown as secondary-report figures, with comparison limits noted"
+      ],
+      [
+       "Price attractiveness (valuation)",
+       "Not performed",
+       "This report is a research-priority judgment, not a price analysis"
+      ]
+     ],
+     "source_ids": [
+      "dart_viewer",
+      "dart_list",
+      "ir_q2_26",
+      "ss_q3p",
+      "naver_fin",
+      "segye_flow",
+      "calc_ledger"
+     ],
+     "status": "qualified",
+     "qualification": "The effect of channels not read is recorded under limitations"
+    },
+    {
+     "type": "paragraph",
+     "text": "The work was done by a single executor performing the roles in sequence, with no separate sub-agents. This is therefore a reviewed draft with research limits, and it will not be marked final until the DART body has been read directly and the actual browser display has been reviewed.",
+     "source_ids": [
+      "dart_viewer",
+      "calc_ledger"
+     ],
+     "status": "qualified",
+     "qualification": "Independent audit and visual review not completed"
+    }
+   ]
+  }
+ ],
+ "opinion": {
+  "decision": "Add to Watchlist",
+  "confidence": "Medium",
+  "decision_scope": "research_priority",
+  "lead": {
+   "text": "Add to Watchlist (research priority, medium confidence): this is a period in which the quality and durability of profit are well worth verifying directly.",
+   "source_ids": [
+    "ss_q3p",
+    "ir_q2_26"
+   ],
+   "status": "inference"
+  },
+  "grounds": {
+   "text": "Grounds: operating profit has risen for five straight quarters including the preliminary Q3 figure, after the 2025-Q2 low, and cash plus short-term financial instruments of KRW 190.0tn at end-June are far above borrowings of KRW 22.4tn.",
+   "source_ids": [
+    "ir_q2_25",
+    "ir_q3_25",
+    "ir_fy25",
+    "ir_q1_26",
+    "ir_q2_26",
+    "ss_q3p",
+    "calc_ledger"
+   ],
+   "status": "inference"
+  },
+  "conditions": {
+   "text": "What would change the view: slower Q4 DRAM price growth, mass production and customer qualification of CXMT's 4F² product, worse cash conversion of operating profit, and wider DX losses and compensation costs in the confirmed results.",
+   "source_ids": [
+    "newspim_peak",
+    "kmj_cxmt",
+    "ir_q2_26",
+    "sedaily_dsdx",
+    "mtn_bonus"
+   ],
+   "status": "inference"
+  },
+  "paragraphs": [
+   {
+    "sentences": [
+     "Samsung Electronics' preliminary Q3 consolidated operating profit is KRW 107.4tn, against KRW 12.2tn in the same quarter of 2025, so the unit of profit has changed within a year.",
+     "Revenue of KRW 195tn is up 13.7% on the previous quarter and operating profit is up 20.0%, so profit grew faster than sales.",
+     "Whether this change is structural or temporary is the central question of this investigation, which is why the conclusion is presented as a research priority: 'Add to Watchlist'.",
+     "The preliminary announcement, however, contains no net profit, segment profit or cash flow, so the composition of profit can only be dissected with the confirmed data through Q2.",
+     "The strongest counter-argument is that this profit leans heavily on memory prices, an external variable, so the same leverage can work in reverse once the rate of price increases slows.",
+     "Investors should therefore look first not at the KRW 107.4tn headline but at how segment profit and gross margin are confirmed in the final results disclosure."
+    ],
+    "source_ids": [
+     "ss_q3p",
+     "ir_q3_25",
+     "ir_q2_26",
+     "calc_ledger"
+    ],
+    "status": "inference",
+    "highlights": [
+     "KRW 107.4tn",
+     "Add to Watchlist"
+    ]
+   },
+   {
+    "sentences": [
+     "Operating margin rose from 8.4% in 2025-Q1 to 52.2% in 2026-Q2, and is 55.1% when computed from the preliminary Q3 figures.",
+     "The change shows most clearly in gross margin, which rose from 34.2% in 2025-Q2 to 61.2% in 2026-Q1 and 69.6% in Q2, while cost of sales grew only about 6% as revenue grew 2.3-fold.",
+     "Revenue growing with costs almost unchanged reads as selling prices and product mix, rather than volumes, driving profit, and the company's Q2 explanation also cited server demand and HBM expansion.",
+     "The mechanism is simple: chip manufacturing has a large fixed-cost share, so when prices rise most of the added revenue falls to profit, and when prices fall profit shrinks at the same speed.",
+     "That makes it risky to treat this high margin as a new baseline, and the fact that annual operating margin was 2.5% in 2023 shows how quickly the same business can move the other way.",
+     "The first observation point for the quality of profit is whether gross margin keeps rising from 69.6% in Q2 or stalls in the confirmed Q3 data."
+    ],
+    "source_ids": [
+     "ir_q2_25",
+     "ir_q1_26",
+     "ir_q2_26",
+     "ir_fy24",
+     "ss_q2rel",
+     "ss_q3p",
+     "calc_ledger"
+    ],
+    "status": "inference",
+    "highlights": [
+     "52.2%",
+     "69.6%"
+    ]
+   },
+   {
+    "sentences": [
+     "Looking at Q2 segment results, the DS division recorded revenue of KRW 127.5tn and operating profit of KRW 89.2tn, producing virtually all of the consolidated KRW 89.5tn.",
+     "In the same quarter DX had an operating loss of KRW 0.8tn while Harman earned KRW 0.4tn and Display KRW 0.7tn, so the businesses outside semiconductors contributed only about KRW 0.3tn combined.",
+     "This asymmetry is estimated to have widened in Q3: one broker calculates that the mobile and networks loss grew from KRW 0.7tn to 1.8tn and the TV and appliances loss from about KRW 10bn to about KRW 400bn.",
+     "Because higher memory prices are profit for the chip division but a component cost for the set businesses, the same factor acts in opposite directions inside one company, and the scale is heavily lopsided.",
+     "The counter-argument is that this works as a natural hedge, easing the set businesses' burden when prices fall, but with DS profit tens to over a hundred times the DX loss it is hard to say the hedge stabilizes group profit.",
+     "The confirmed results, when segment figures are published, should therefore be used to check the durability of DS profit and the size of the DX loss separately."
+    ],
+    "source_ids": [
+     "ss_q2rel",
+     "sedaily_dsdx",
+     "calc_ledger"
+    ],
+    "status": "qualified",
+    "highlights": [
+     "KRW 89.2tn"
+    ],
+    "qualification": "Q3 segment figures are broker estimates and not company-confirmed"
+   },
+   {
+    "sentences": [
+     "At June 30, 2026, cash and equivalents of KRW 92.9tn plus short-term financial instruments of KRW 97.0tn come to KRW 190.0tn, well above borrowings of KRW 22.4tn.",
+     "Net cash after subtracting borrowings is calculated at about KRW 167.5tn, a conservative figure that excludes long-term financial assets and similar items.",
+     "First-half operating cash flow was KRW 145.4tn and spending on tangible and intangible assets was KRW 33.0tn, leaving about KRW 112.4tn after funding capital expenditure.",
+     "By quarter, however, operating cash flow swung from 70% of operating profit in Q1 to 117% in Q2 and was 99% for the half; given 196% for full-year 2025, part of the profit growth may have been tied up in working capital.",
+     "Trade receivables were KRW 96.4tn and inventories KRW 71.4tn at end-June, but their change from year-end was not checked, so the cause is not asserted.",
+     "The conclusion that financial capacity is ample is supported by the numbers, but how fast profit turns into cash needs to be checked directly in the working-capital items of the Q3 report."
+    ],
+    "source_ids": [
+     "ir_q2_26",
+     "ir_q1_26",
+     "ir_fy25",
+     "calc_ledger"
+    ],
+    "status": "inference",
+    "highlights": [
+     "KRW 190.0tn",
+     "KRW 167.5tn"
+    ]
+   },
+   {
+    "sentences": [
+     "Views differ on how long this profit will last.",
+     "Morgan Stanley is reported to expect the year-on-year growth rate of DRAM contract prices to peak in the fourth quarter of 2026 and slow sharply in 2027, which does not mean prices fall at once but that the pace of increases slows.",
+     "Micron, by contrast, said in its September 30 results that demand will exceed supply in 2027 and 2028 and that more than 75% of fiscal 2027 shipments are already allocated to customers.",
+     "SK hynix also said it has finished talks on long-term supply agreements, typically five years, with more than ten customers, so demand-side signals are strong.",
+     "Yet share prices and earnings estimates tend to react to the rate of change rather than the level of prices, so the core of the peak thesis is that shares can wobble first, when growth in prices slows, even while demand is strong.",
+     "What decides this debate is therefore whether the Q4 contract-price growth rate and the price terms of long-term agreements become visible."
+    ],
+    "source_ids": [
+     "newspim_peak",
+     "fnnews_micron",
+     "newsis_hynix"
+    ],
+    "status": "qualified",
+    "qualification": "Reports views and statements of each institution; not independently verified"
+   },
+   {
+    "sentences": [
+     "HBM is the gauge of whether Samsung is regaining share, and the company said in February that it was first in the industry to ship HBM4 in volume.",
+     "In its Q2 release it said it expanded HBM4 supply and was first in the industry to ship HBM4E samples, and broker estimates have Q3 HBM sales at about double Q2.",
+     "Nvidia supply and the 28–30% HBM4 share for 2026 depend on reports and market-research estimates with undisclosed sources, so they were not treated as established fact.",
+     "Competitor SK hynix began HBM4 mass shipments in Q2 and says talks on 2027 volumes and prices are going smoothly, showing that HBM4 is not a Samsung-only comeback story.",
+     "Micron also announced in February that it had begun HBM4 shipments, so the meaning of Samsung's 'first' claim depends on the timing gap between the company's announcement and its rivals'.",
+     "What investors should check is whether the final results call gives HBM revenue and customer mix in numbers, and whether they point the same way as broker estimates."
+    ],
+    "source_ids": [
+     "ss_q2rel",
+     "bizwatch_hbm4",
+     "econovill_q3",
+     "newsis_hynix"
+    ],
+    "status": "qualified",
+    "highlights": [
+     "28–30%"
+    ],
+    "qualification": "Nvidia supply and share are company claims and unnamed estimates; customer confirmation not read"
+   },
+   {
+    "sentences": [
+     "China's CXMT said at an event in Shanghai in October that it would show server DDR5 using a 4F² cell structure within the year, and that news was one factor in the fall in Samsung and SK hynix shares from October 12.",
+     "4F² reduces cell area versus the existing 6F² structure, in theory fitting more cells into the same area, but CXMT disclosed no specifications, yield, mass-production schedule or customers.",
+     "CXMT held 7.67% of DRAM revenue in 2025-Q4, ranking fourth in the world, while Samsung, SK hynix and Micron still hold over 90%, so the threat lies in the pace of capacity expansion and technology catch-up rather than current share.",
+     "One analysis points out that Samsung may have greater short-term exposure than HBM-centred SK hynix because it has a higher share of Chinese customers in commodity and mobile DRAM.",
+     "On the other hand, Samsung presented a 16Gb 4F² test chip at ISSCC in February and is reported to target sub-10nm DRAM mass production by 2028, so it is not a one-sided victim of the technology catch-up.",
+     "Since there are also views that the market reaction has run ahead of confirmed supply, it is right not to assert the size of the threat until news of CXMT's mass-production results and customer qualification appears."
+    ],
+    "source_ids": [
+     "investing_cxmt",
+     "kmj_cxmt",
+     "newspim_1014",
+     "newspim_peak"
+    ],
+    "status": "qualified",
+    "qualification": "CXMT's mass production and customer qualification are unconfirmed; Samsung's target date is as reported"
+   },
+   {
+    "sentences": [
+     "Shareholder returns sit under the 2024–2026 policy of returning 50% of three-year free cash flow, with the regular dividend at about KRW 9.8tn a year and quarterly per-share dividends of KRW 372 in Q1 and KRW 374 in Q2.",
+     "According to reports on the August 21 disclosure, the company estimated the remaining 2026 return pool at KRW 90–110tn, of which about KRW 30tn will be paid first as cash dividends including the regular Q3 dividend, with the rest and the method to be decided by the board at the end of January 2027.",
+     "A report said KRW 14.58tn of treasury shares would be cancelled on April 2, and the October 12 treasury-stock acquisition result report was filed on DART, but whether cancellation was completed and the details of the acquisition result were not checked because the filing text could not be read.",
+     "Resolution, execution, completed acquisition and completed cancellation have to be separated because the actual size of the return differs at each stage.",
+     "The counter-argument is that treasury-share purchases for employee bonuses are not counted as returns while reducing free cash flow, which cuts the pool available for a special dividend.",
+     "Brokers expect the new return policy to expand greatly, but this is an expectation ahead of the board's decision and should be kept distinct."
+    ],
+    "source_ids": [
+     "sisaj_return",
+     "newstomato_div",
+     "newstomato_cancel",
+     "dart_list",
+     "mtn_bonus"
+    ],
+    "status": "qualified",
+    "qualification": "Return sizes are from reports and broker estimates ahead of the board decision; DART text not read"
+   },
+   {
+    "sentences": [
+     "The wage and bonus package tentatively agreed on May 20 was reported as a structure that accrues 10.5% of DS division performance, with no cap, as a special bonus paid in shares over ten years.",
+     "Because the shares for employees must be bought in the market, estimates reported say that KRW 20–25tn of treasury-share purchases are needed this year and up to about KRW 90tn next year; these are broker estimates.",
+     "Those purchases are not counted as returns and reduce free cash flow, so by Mirae Asset's estimate remaining return capacity falls from KRW 117.5tn to KRW 103.9tn.",
+     "DX employees receive about KRW 6 million in shares and a different bonus cap, widening the pay gap between divisions, and reports said some DX union members pursued a no vote and an injunction.",
+     "Structurally, a fixed share of profit goes to employees, so in boom periods the shareholders' portion can grow more slowly than operating profit.",
+     "The same structure also lowers the risk of losing key staff and of strikes, so the cost cannot simply be called a loss, and the provisions for labour costs in the confirmed Q3 results should be checked."
+    ],
+    "source_ids": [
+     "sisaj_labor",
+     "mtn_bonus"
+    ],
+    "status": "qualified",
+    "qualification": "Deal terms and purchase sizes are from reports and broker estimates; reports differ on 'business performance' versus 'operating profit'"
+   },
+   {
+    "sentences": [
+     "What the memory boom is hiding is foundry and System LSI.",
+     "In its Q2 explanation, System LSI recorded its largest first-half revenue and Foundry improved on HBM base-die and U.S. customer demand, but no profit figures were disclosed.",
+     "An August report says Samsung has invested more than US$37bn in the Taylor, Texas fab, that filling Phase 1 utilization is the task, and that early 2nm yield has been hard to secure.",
+     "The rumored KRW 20tn Tesla AI5/AI6 order is an observation without a confirmed contract, so it was kept as something to watch and not as a growth thesis.",
+     "The report that TSMC holds most next-generation volume from Nvidia, Apple and AMD shows how uncertain it is how many outside customers Samsung can win.",
+     "Whether foundry turns profitable should be checked in the confirmed results with segment profit, and outside customer wins in official announcements."
+    ],
+    "source_ids": [
+     "ss_q2rel",
+     "ddaily_foundry"
+    ],
+    "status": "qualified",
+    "qualification": "Foundry status is a single outlet's report; profit and contracts unconfirmed"
+   },
+   {
+    "sentences": [
+     "On October 13 Samsung's common shares closed down 7.39% at KRW 232,000, on the 15th they closed down 9.48% at KRW 210,000 as the KOSPI fell 7.57% and a circuit breaker was triggered.",
+     "On the 16th they rebounded 2.62% to close at KRW 215,500, after foreign investors net sold for eight straight sessions from October 2 to 15, with net selling of Samsung and SK hynix alone about KRW 16.4tn through the 15th and retail net buying of the two about KRW 7.1tn through the 14th.",
+     "Broker target prices as of October 7 ranged from KRW 270,000 to KRW 630,000, but they were issued before this sell-off, so comparing them directly with the current price would mislead.",
+     "Besides the CXMT news, a hotter-than-expected US September CPI, debt worries at AI cloud provider CoreWeave and foreign flows were cited as causes of the fall, so it is hard to attribute it to a deterioration in Samsung's own earnings.",
+     "A reported 52-week high of KRW 380,000 puts the current price KRW 215,500 about 43% lower, but that high comes from an auto-generated article whose figures do not match internally, so it is for reference only.",
+     "This report did not analyze price attractiveness, so it makes no judgment on whether the fall is an opportunity, and notes only that volatility of this size has to be weighed separately in any personal allocation decision."
+    ],
+    "source_ids": [
+     "newspim_1014",
+     "etnews_1016",
+     "segye_flow",
+     "newsway_tp",
+     "kmj_cxmt",
+     "topstar_1016"
+    ],
+    "status": "qualified",
+    "highlights": [
+     "KRW 215,500"
+    ],
+    "qualification": "Closing prices are from original press reports; the 52-week high is from a single auto-generated article"
+   },
+   {
+    "sentences": [
+     "'Add to Watchlist' means that the durability of profit, not its size, is worth verifying directly, and the priority will be raised or lowered if the conditions below are confirmed.",
+     "Conditions for raising the priority are that Q4 DRAM price growth holds up, that the confirmed results show HBM revenue and customer mix in numbers, and that operating cash flow recovers to the level of operating profit.",
+     "Conditions for lowering it are that DRAM average selling prices turn down, that CXMT's 4F² products move to mass production and major-customer qualification, or that DX losses and compensation costs eat into the profit growth.",
+     "Because the DART body and notes could not be read in this investigation, the judgment also needs to be revisited after checking the segment note and the commitments and contingencies notes.",
+     "The confirmed Q3 results, the Q3 report and the board's return decision announced for the end of January 2027 are the schedule that will supply new evidence in that order.",
+     "This document is not an investment recommendation; a judgment on price attractiveness and on position size reflecting a person's goals, horizon and loss tolerance is separate work."
+    ],
+    "source_ids": [
+     "ss_q3p",
+     "newspim_peak",
+     "newstomato_div",
+     "dart_viewer"
+    ],
+    "status": "qualified",
+    "qualification": "The conditions are the author's analysis; the date of the confirmed results announcement was not found"
+   }
+  ]
+ },
+ "editorial_review": {
+  "argument_depth": {
+   "status": "limited",
+   "evidence": "The author checked each paragraph for thesis, evidence, counter-argument and follow-up conditions, but no independent review was done."
+  },
+  "decision_scope": {
+   "status": "limited",
+   "evidence": "Recorded as opinion.decision_scope=research_priority and separated from price attractiveness and personal position size in the summary, the twelve paragraphs and the last paragraph. No independent confirmation."
+  },
+  "material_coverage": {
+   "status": "limited",
+   "evidence": "Positive points (profit, cash, long-term agreements) and negative points (price-peak thesis, CXMT, DX losses, compensation costs, foundry) are linked in sections 5–6 and opinion paragraphs 5, 7, 9 and 10. DART body and broker/industry originals were not read."
+  },
+  "visual_review": {
+   "status": "pending",
+   "evidence": "Fonts, tables, charts and mobile overflow were not checked in a real browser."
+  }
+ }
+}
